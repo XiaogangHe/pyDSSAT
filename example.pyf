@@ -1,0 +1,19 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module example ! in 
+    interface  ! in :example
+        function csm(rnmode,fileb,filectl) ! in :example:Call_CSM.f90
+            use headermod
+            use moduledata
+            use moduledefs
+            character*1 :: rnmode
+            character*30 :: fileb
+            character*120 :: filectl
+            real :: csm
+        end function csm
+    end interface 
+end python module example
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/

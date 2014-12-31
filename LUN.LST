@@ -1,0 +1,10 @@
+*Summary of files opened during simulation
+
+Unit  File
+Num.  Variable Name
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         DEC 29, 2014; 22:03:04
+
+ Unit  Filename
+   21  FILEIO
+  101  ERRORO
+  102  WARNING.OUT

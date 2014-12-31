@@ -1,0 +1,13 @@
+*WARNING DETAIL FILE
+
+******************************************************************************
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         DEC 29, 2014; 22:03:04
+
+*RUN   0
+
+
+ CSM     YEAR DOY =    0   0
+ Could not locate error file:                                        MODEL.ERR 
+ Unknown ERROR. Error number:     4                                            
+ File: DSSATPRO.L45   Line:     0 Error key: CSM                               
+ Simulations terminated.                                                       
