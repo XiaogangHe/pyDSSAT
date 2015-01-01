@@ -34,6 +34,7 @@ def	processOut(fileName,varName):
 #####	processOut('Summary.OUT','HWAH')[0]['PDAT']	: Data for specific variable
 
 print	processOut('Summary.OUT','HWAH')[0]['PDAT']
+print	processOut('Summary.OUT','HWAH')[0]['PDAT']
 
 
 '''
