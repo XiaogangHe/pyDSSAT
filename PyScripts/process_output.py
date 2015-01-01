@@ -2,7 +2,7 @@
 
 import	numpy			as np
 import	matplotlib.pyplot	as plt
-
+import	process_CDE		as pCDE
 
 baseDir	= '/Users/hexg/Dropbox/Study/Princeton_2014-2015_Fall/APC524/APC_Project_HEXG/Data'
 
@@ -23,7 +23,8 @@ def	processOut(fileName,varName):
 	plt.xlim([-1,nYear])
 	plt.xticks(range(nYear)[::5],Year[::5])
 	plt.xlabel('Year',fontsize=15)
-	plt.title('Harvested Yield (kg [dm]/ha)',fontsize=20)
+	varDes	= pCDE.getVarDes(baseDir,'SUMMARYOUT.CDE')[varName][1]
+	plt.title(varDes,fontsize=20)
 	plt.show()
 	
 	return dataDic, sYear, eYear
@@ -33,13 +34,6 @@ def	processOut(fileName,varName):
 #####	processOut('Summary.OUT','HWAH')[0].keys()	: See variables
 #####	processOut('Summary.OUT','HWAH')[0]['PDAT']	: Data for specific variable
 
-print	processOut('Summary.OUT','HWAH')[0]['PDAT']
-print	processOut('Summary.OUT','HWAH')[0]['PDAT']
-
-
-'''
-print	processOut('Summary.OUT')[0]['PDAT']
-print	processOut('Summary.OUT')[1]
-print	processOut('Summary.OUT')[2]
-'''
+print	processOut('Summary.OUT','HWAH')
+print	processOut('Summary.OUT','EPCM')
 
