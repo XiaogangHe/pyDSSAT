@@ -5,12 +5,16 @@ import	matplotlib.pyplot	as plt
 import	process_CDE		as pCDE
 
 baseDir	= '/Users/hexg/Dropbox/Study/Princeton_2014-2015_Fall/APC524/APC_Project_HEXG/Data'
+varName	= 'HWAH'
 
-def	processOut(fileName,varName):
+def	processOut(fileName):
 	FILE	= file('%s/%s'%(baseDir,fileName)).readlines()
 	outData	= FILE[4:]
 	varId	= FILE[3]					# Read the raw variables 
 	varId	= map(str,str.split(varId)[12:])		# Only get the useful variables
+	bType	= map(str,str.split(FILE[4]))[5:7]		# Basic type: crop and model
+	crpType	= bType[0]
+	modType	= bType[1]
 	nYear	= np.size(outData)
 	dataArr	= np.array([map(float,str.split(outData[i])[11:]) for i in range(nYear)])	# Convert the raw data to numpy array
 	dataDic	= {varId[i]:dataArr[:,i] for i in range(len(varId))} 
@@ -34,6 +38,5 @@ def	processOut(fileName,varName):
 #####	processOut('Summary.OUT','HWAH')[0].keys()	: See variables
 #####	processOut('Summary.OUT','HWAH')[0]['PDAT']	: Data for specific variable
 
-print	processOut('Summary.OUT','HWAH')
-print	processOut('Summary.OUT','EPCM')
+print	processOut('Summary.OUT')[1]
 
