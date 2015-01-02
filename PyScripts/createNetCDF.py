@@ -1,19 +1,39 @@
 #!/usr/bin/env python
 
-import	numpy	as np
-import	netCDF4	as netcdf
+import	numpy		as	np
+import	re
+import	netCDF4		as	netcdf
+from	process_output	import	processOut
 
 dims	= {'nlat'	: 1,
 	   'nlon'	: 1,
 	   'res'	: 1,
 	   'minlat'	: 10,
 	   'minlon'	: 10,
-	   'tInitial'	: 1970,
-	   'tStep'	: 1,
-	   'nt'		: 30
+	   'tStep'	: 1
 	  }
 
-def	Create_NETCDF_File(dims, fileName):
+baseDir		= '/Users/hexg/Dropbox/Study/Princeton_2014-2015_Fall/APC524/APC_Project_HEXG/Data'
+CDEFileName	= 'SUMMARYOUT.CDE'
+inFileName	= 'Summary.OUT'
+outFileName	= 'Summary.nc'
+
+def	getVarDes(baseDir,CDEFileName):
+	"""
+	Get variable label and description from the .CDE file
+
+	Returns
+	------
+	Variables in DSSAT summary output: Dictionary
+	"""
+	
+	sumOutCDE	= file('%s/%s'%(baseDir,CDEFileName)).readlines()
+	sumOutCDEArr	= [map(str,re.split(r'\t+',sumOutCDE[i].strip())) for i in range(5,73)]
+	sumOutCDEDic	= {sumOutCDEArr[i][0]:(sumOutCDEArr[i][1],sumOutCDEArr[i][2]) for i in range(np.shape(sumOutCDEArr)[0])}
+	
+	return sumOutCDEDic
+
+def	Create_NETCDF_File(dims, outFileName):
 	"""
 	Creat DSSAT output to netCDF format
 
@@ -22,21 +42,26 @@ def	Create_NETCDF_File(dims, fileName):
 	DSSAT summary output: netCDF format
 	"""
 
+	dataOut	= processOut(inFileName)
+	dataDic	= dataOut[0]
+	tInitial= dataOut[1]
+	nt	= dataOut[2]-tInitial
+	t	= np.arange(0,nt)
+	
 	nlat	= dims['nlat']
 	nlon	= dims['nlon']
 	res	= dims['res']
 	minlat	= dims['minlat']
 	minlon	= dims['minlon']
-	t	= np.arange(0,nt)
+	tStep	= dims['tStep']
 
 	# Get variable names, their description and data
-	varsInfo	= getVarDes(baseDir,CDEFileName)
-	varsName	= varsInfo.keys()
-	
+	varsInfo= getVarDes(baseDir,CDEFileName)
+	varsName= varsInfo.keys()
 
 	# Prepare the netCDF file
 	# Create file
-	f	= netcdf.Dataset(fileName,'w')
+	f	= netcdf.Dataset(outFileName,'w')
 
 	# Define dimensions
 	f.createDimension('lon',nlon)
@@ -65,24 +90,13 @@ def	Create_NETCDF_File(dims, fileName):
 	
 	# Data
 	for var in varsName:
-		f.createVariable(var,'f',('t','lat','lon'),fill_value=-9.99e+08)
+		f.createVariable(var,'f',('t','lat','lon'))
 		f.variables[var].long_name = varsInfo[var][1]
-		fp.variables[var][0] = data
-
-	return f
-
-def	getVarDes(baseDir,CDEFileName):
-	"""
-	Get variable label and description from the .CDE file
-
-	Returns
-	------
-	Variables in DSSAT summary output: Dictionary
-	"""
+		data = dataDic[var]
+		f.variables[var][:,0,0] = data
 	
-	sumOutCDE	= file('%s/%s'%(baseDir,CDEFileName)).readlines()
-	sumOutCDEArr	= [map(str,re.split(r'\t+',sumOutCDE[i].strip())) for i in range(5,73)]
-	sumOutCDEDic	= {sumOutCDEArr[i][0]:(sumOutCDEArr[i][1],sumOutCDEArr[i][2]) for i in range(np.shape(sumOutCDEArr)[0])}
-	
-	return sumOutCDEDic
+	f.close()
 
+#	return f
+
+Create_NETCDF_File(dims, outFileName)
