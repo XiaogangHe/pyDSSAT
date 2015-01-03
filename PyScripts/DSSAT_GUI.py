@@ -8,8 +8,28 @@
 # WARNING! All changes made in this file will be lost!
 
 import	sys
-from	PyQt4	import	QtCore, QtGui
+from	PyQt4		import	QtCore, QtGui
+import  DSSAT_LIBRARY	as	DSSAT
 
+# Basic settings
+dims            = {}
+dims['nlat']    = 1
+dims['nlon']    = 1
+dims['res']     = 1
+dims['minlat']  = 10
+dims['minlon']  = 10
+dims['tStep']   = 1
+
+baseDir         = '/Users/hexg/Dropbox/Study/Princeton_2014-2015_Fall/APC524/APC_Project_HEXG/Data'
+CDEFileName     = 'SUMMARYOUT.CDE'
+inFileName      = 'Summary.OUT'
+outFileName     = 'Summary.nc'
+varName         = 'HWAM'
+
+out     = DSSAT.postProcess(baseDir, CDEFileName)
+#out.drawTimeSeries(inFileName,varName)
+#out.getVarValues(inFileName)[0]
+#out.Create_NETCDF_File(dims, inFileName, outFileName)
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -203,7 +223,10 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.comboBox.setItemText(1, _translate("MainWindow", "yellow", None))
         self.comboBox.setItemText(2, _translate("MainWindow", "green", None))
         self.pushButton_3.setText(_translate("MainWindow", "Plot Time Series", None))
-        self.pushButton_4.setText(_translate("MainWindow", "Erase", None))
+	#self.pushButton_3.clicked.connect(out.drawTimeSeries)
+	self.pushButton_3.clicked.connect(self.plotTS)
+
+	self.pushButton_4.setText(_translate("MainWindow", "Erase", None))
         self.pushButton_2.setText(_translate("MainWindow", "Display Data", None))
         self.comboBox_2.setItemText(0, _translate("MainWindow", "Yield", None))
         self.comboBox_2.setItemText(1, _translate("MainWindow", "Rain", None))
@@ -219,6 +242,10 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.actionExit.setText(_translate("MainWindow", "Exit", None))
         self.action_out_to_netCDF.setText(_translate("MainWindow", ".out to .netCDF", None))
         self.action_netCDF_to_out.setText(_translate("MainWindow", ".netCDF to .out", None))
+
+    def plotTS(self):
+	out.drawTimeSeries(inFileName,varName)
+
 
 if __name__ == "__main__":
 	app = QtGui.QApplication(sys.argv)
