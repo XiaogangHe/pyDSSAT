@@ -20,7 +20,7 @@ dims['minlat']  = 10
 dims['minlon']  = 10
 dims['tStep']   = 1
 
-baseDir         = '/Users/hexg/Dropbox/Study/Princeton_2014-2015_Fall/APC524/APC_Project_HEXG/Data'
+baseDir         = '../Data'
 CDEFileName     = 'SUMMARYOUT.CDE'
 inFileName      = 'Summary.OUT'
 outFileName     = 'Summary.nc'
