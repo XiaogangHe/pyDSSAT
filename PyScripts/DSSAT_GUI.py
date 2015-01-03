@@ -217,7 +217,9 @@ class Ui_MainWindow(QtGui.QMainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "DSSAT Crop Model", None))
         self.label.setText(_translate("MainWindow", "Model Input Information", None))
         self.pushButton.setText(_translate("MainWindow", "Open Original Files", None))
-        self.label_3.setText(_translate("MainWindow", "From", None))
+	self.pushButton.clicked.connect(self.runModelEvent)
+        
+	self.label_3.setText(_translate("MainWindow", "From", None))
         self.label_2.setText(_translate("MainWindow", "year", None))
         self.label_5.setText(_translate("MainWindow", "to", None))
         self.label_6.setText(_translate("MainWindow", "year", None))
@@ -273,6 +275,9 @@ class Ui_MainWindow(QtGui.QMainWindow):
 	else:
 		event.ignore()
 
+    def runModelEvent(self, event):
+	reply = QtGui.QMessageBox.information(self, 'Message',"Successfully run DSSAT!")
+	return
 
 if __name__ == "__main__":
 	app = QtGui.QApplication(sys.argv)
