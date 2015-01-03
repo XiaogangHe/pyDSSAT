@@ -8,8 +8,11 @@
 # WARNING! All changes made in this file will be lost!
 
 import	sys
-from	PyQt4		import	QtCore, QtGui
-import  DSSAT_LIBRARY	as	DSSAT
+from	PyQt4			import	QtCore, QtGui
+import  DSSAT_LIBRARY		as	DSSAT
+import	matplotlib.pyplot	as	plt
+from	matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
+from	matplotlib.backends.backend_qt4agg import NavigationToolbar2QTAgg as NavigationToolbar
 
 # Basic settings
 dims            = {}
@@ -222,9 +225,16 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.comboBox.setItemText(0, _translate("MainWindow", "red", None))
         self.comboBox.setItemText(1, _translate("MainWindow", "yellow", None))
         self.comboBox.setItemText(2, _translate("MainWindow", "green", None))
-        self.pushButton_3.setText(_translate("MainWindow", "Plot Time Series", None))
-	#self.pushButton_3.clicked.connect(out.drawTimeSeries)
+        
+	self.pushButton_3.setText(_translate("MainWindow", "Plot Time Series", None))
+	'''
+	self.figure = plt.figure()
+	self.canvas = FigureCanvas(self.figure)
+	# this is the Navigation widget
+	self.toolbar = NavigationToolbar(self.canvas, self)
+	'''
 	self.pushButton_3.clicked.connect(self.plotTS)
+
 
 	self.pushButton_4.setText(_translate("MainWindow", "Erase", None))
         self.pushButton_2.setText(_translate("MainWindow", "Display Data", None))
@@ -255,6 +265,13 @@ class Ui_MainWindow(QtGui.QMainWindow):
 	file = open(filename)
 	data = file.read()
 #	self.textEdit.setText(data)
+
+    def closeEvent(self, event):
+	reply = QtGui.QMessageBox.question(self, 'Message',"Are you sure to quit?", QtGui.QMessageBox.Yes,QtGui.QMessageBox.No)
+	if reply == QtGui.QMessageBox.Yes:
+		event.accept()
+	else:
+		event.ignore()
 
 
 if __name__ == "__main__":
