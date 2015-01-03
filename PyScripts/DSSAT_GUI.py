@@ -191,7 +191,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
+        MainWindow.setWindowTitle(_translate("MainWindow", "DSSAT Crop Model", None))
         self.label.setText(_translate("MainWindow", "Model Input Information", None))
         self.pushButton.setText(_translate("MainWindow", "Open Original Files", None))
         self.label_3.setText(_translate("MainWindow", "From", None))
@@ -221,7 +221,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.action_netCDF_to_out.setText(_translate("MainWindow", ".netCDF to .out", None))
 
 if __name__ == "__main__":
-		app = QtGui.QApplication(sys.argv)
-		ex = Ui_MainWindow()
-		ex.show()
-		sys.exit(app.exec_())
+	app = QtGui.QApplication(sys.argv)
+	ex = Ui_MainWindow()
+	ex.show()
+	sys.exit(app.exec_())
