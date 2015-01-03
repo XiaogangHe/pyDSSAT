@@ -1,8 +1,5 @@
 #!/usr/bin/env python
 
-import	numpy		as	np
-import	re
-import	netCDF4		as	netcdf
 import	DSSAT_LIBRARY	as	DSSAT
 
 dims		= {}
