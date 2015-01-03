@@ -237,6 +237,10 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.menuData_Format_Convert.setTitle(_translate("MainWindow", "Data Format Convert", None))
         self.menuHelp.setTitle(_translate("MainWindow", "Help", None))
         self.actionLoad_Summary_out.setText(_translate("MainWindow", "Load Summary.out", None))
+	self.actionLoad_Summary_out.setShortcut('Ctrl+O')
+	self.actionLoad_Summary_out.setStatusTip('Open New File')
+	self.actionLoad_Summary_out.triggered.connect(self.showDialog)
+
         self.actionLoad_NetCDF_File.setText(_translate("MainWindow", "Load NetCDF File", None))
         self.actionRecent_Files.setText(_translate("MainWindow", "Recent Files", None))
         self.actionExit.setText(_translate("MainWindow", "Exit", None))
@@ -245,6 +249,12 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def plotTS(self):
 	out.drawTimeSeries(inFileName,varName)
+
+    def showDialog(self):
+	filename = QtGui.QFileDialog.getOpenFileName(self, 'Open file','../Data')
+	file = open(filename)
+	data = file.read()
+#	self.textEdit.setText(data)
 
 
 if __name__ == "__main__":
