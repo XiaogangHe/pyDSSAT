@@ -3,8 +3,7 @@
 import	numpy		as	np
 import	re
 import	netCDF4		as	netcdf
-from	process_output	import	processOut
-import	createNetCDF	as	test
+import	DSSAT_LIBRARY	as	DSSAT
 
 dims		= {}
 dims['nlat']	= 1
@@ -18,5 +17,9 @@ baseDir		= '/Users/hexg/Dropbox/Study/Princeton_2014-2015_Fall/APC524/APC_Projec
 CDEFileName	= 'SUMMARYOUT.CDE'
 inFileName	= 'Summary.OUT'
 outFileName	= 'Summary.nc'
+varName		= 'HWAM'
 
-test.Create_NETCDF_File(dims, inFileName,outFileName)
+out	= DSSAT.postProcess(baseDir, CDEFileName)
+out.drawTimeSeries(inFileName,varName)
+out.getVarValues(inFileName)[0]
+out.Create_NETCDF_File(dims, inFileName, outFileName)
