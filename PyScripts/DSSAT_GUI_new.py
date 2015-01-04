@@ -9,6 +9,25 @@
 
 import	sys
 from	PyQt4 import QtCore, QtGui
+import  DSSAT_LIBRARY	as	DSSAT
+ 		 
+# Basic settings
+dims            = {}
+dims['nlat']    = 1
+dims['nlon']    = 1
+dims['res']     = 1
+dims['minlat']  = 10
+dims['minlon']  = 10
+dims['tStep']   = 1
+
+baseDir         = '../Data'
+CDEFileName     = 'SUMMARYOUT.CDE'
+inFileName      = 'Summary.OUT'
+outFileName     = 'Summary.nc'
+varName         = 'HWAM'
+
+out		= DSSAT.postProcess(baseDir, CDEFileName)
+
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -198,6 +217,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Arial"))
         self.spinBox_5.setFont(font)
+	self.spinBox_5.setMinimum(1)
+	self.spinBox_5.setMaximum(12)
         self.spinBox_5.setObjectName(_fromUtf8("spinBox_5"))
         self.horizontalLayout_4.addWidget(self.spinBox_5)
         self.label_12 = QtGui.QLabel(self.verticalLayoutWidget_6)
@@ -211,6 +232,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Arial"))
         self.spinBox_6.setFont(font)
+	self.spinBox_6.setMinimum(1)
+	self.spinBox_6.setMaximum(31)
         self.spinBox_6.setObjectName(_fromUtf8("spinBox_6"))
         self.horizontalLayout_4.addWidget(self.spinBox_6)
         self.Ready = QtGui.QPushButton(self.centralwidget)
@@ -941,6 +964,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.Ready_2.setMouseTracking(False)
         self.Ready_2.setObjectName(_fromUtf8("Ready_2"))
         MainWindow.setCentralWidget(self.centralwidget)
+
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 293, 22))
         self.menubar.setObjectName(_fromUtf8("menubar"))
@@ -954,11 +978,23 @@ class Ui_MainWindow(QtGui.QMainWindow):
         MainWindow.setStatusBar(self.statusbar)
         self.actionLoad_Summary_out = QtGui.QAction(MainWindow)
         self.actionLoad_Summary_out.setObjectName(_fromUtf8("actionLoad_Summary_out"))
+	self.actionLoad_Summary_out.setShortcut('Ctrl+O')
+	self.actionLoad_Summary_out.setStatusTip('Open Original File')
+	self.actionLoad_Summary_out.triggered.connect(self.showDialog)
+
         self.actionLoad_NetCDF_File = QtGui.QAction(MainWindow)
         self.actionLoad_NetCDF_File.setObjectName(_fromUtf8("actionLoad_NetCDF_File"))
-        self.actionRecent_Files = QtGui.QAction(MainWindow)
+	self.actionLoad_NetCDF_File.setShortcut('Ctrl+N')
+	self.actionLoad_NetCDF_File.setStatusTip('Open NetCDF File')
+	self.actionLoad_NetCDF_File.triggered.connect(self.showDialog)
+        
+	self.actionRecent_Files = QtGui.QAction(MainWindow)
         self.actionRecent_Files.setObjectName(_fromUtf8("actionRecent_Files"))
-        self.actionExit = QtGui.QAction(MainWindow)
+	self.actionRecent_Files.setShortcut('Ctrl+R')
+	self.actionRecent_Files.setStatusTip('Open Recent File')
+	self.actionRecent_Files.triggered.connect(self.showDialog)
+        
+	self.actionExit = QtGui.QAction(MainWindow)
         self.actionExit.setObjectName(_fromUtf8("actionExit"))
         self.action_out_to_netCDF = QtGui.QAction(MainWindow)
         self.action_out_to_netCDF.setObjectName(_fromUtf8("action_out_to_netCDF"))
@@ -999,6 +1035,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.label_11.setText(_translate("MainWindow", "Month", None))
         self.label_12.setText(_translate("MainWindow", "    Date", None))
         self.Ready.setText(_translate("MainWindow", "Run Model", None))
+	self.Ready.clicked.connect(self.runModelEvent)
+
         self.label_13.setText(_translate("MainWindow", "Crop Type", None))
         self.comboBox_5.setItemText(0, _translate("MainWindow", "Maize", None))
         self.comboBox_5.setItemText(1, _translate("MainWindow", "Drybean", None))
@@ -1037,9 +1075,11 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.label_16.setText(_translate("MainWindow", "Output Section", None))
         self.comboBox.setItemText(0, _translate("MainWindow", "Yield", None))
         self.comboBox.setItemText(1, _translate("MainWindow", "Precipitation", None))
-        self.comboBox.setItemText(2, _translate("MainWindow", "Maximum Temperature", None))
+        self.comboBox.setItemText(2, _translate("MainWindow", "Max Temperature", None))
         self.Ready_3.setText(_translate("MainWindow", "Plot", None))
-        self.Ready_4.setText(_translate("MainWindow", "To NetCDF", None))
+        self.Ready_3.clicked.connect(self.plotTS)
+	
+	self.Ready_4.setText(_translate("MainWindow", "To NetCDF", None))
         self.label_20.setText(_translate("MainWindow", "Select a variable", None))
         self.label_4.setText(_translate("MainWindow", "pyDSSAT", None))
         self.label_17.setText(_translate("MainWindow", "2015 © APC 524 Project.", None))
@@ -1062,6 +1102,25 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.actionFAQ.setText(_translate("MainWindow", "FAQ", None))
         self.actionReport.setText(_translate("MainWindow", "Report", None))
         self.actionAbout.setText(_translate("MainWindow", "About...", None))
+
+    def plotTS(self):
+	out.drawTimeSeries(inFileName,varName)
+
+    def showDialog(self):
+	filename = QtGui.QFileDialog.getOpenFileName(self, 'Open file','../Data')
+	file = open(filename)
+	data = file.read()
+
+    def closeEvent(self, event):
+	reply = QtGui.QMessageBox.question(self, 'Message',"Are you sure to quit?", QtGui.QMessageBox.Yes,QtGui.QMessageBox.No)
+	if reply == QtGui.QMessageBox.Yes:
+		event.accept()
+	else:
+		event.ignore()
+
+    def runModelEvent(self, event):
+	reply = QtGui.QMessageBox.information(self, 'Message',"Successfully run DSSAT!")
+	return
 
 if __name__ == "__main__":
         app = QtGui.QApplication(sys.argv)
