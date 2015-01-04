@@ -8,7 +8,7 @@
 # WARNING! All changes made in this file will be lost!
 
 import	sys
-from	PyQt4 import QtCore, QtGui
+from	PyQt4		import	QtCore, QtGui
 import  DSSAT_LIBRARY	as	DSSAT
  		 
 # Basic settings
@@ -1080,6 +1080,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.Ready_3.clicked.connect(self.plotTS)
 	
 	self.Ready_4.setText(_translate("MainWindow", "To NetCDF", None))
+	self.Ready_4.clicked.connect(self.convert)
+
         self.label_20.setText(_translate("MainWindow", "Select a variable", None))
         self.label_4.setText(_translate("MainWindow", "pyDSSAT", None))
         self.label_17.setText(_translate("MainWindow", "2015 © APC 524 Project.", None))
@@ -1104,7 +1106,10 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.actionAbout.setText(_translate("MainWindow", "About...", None))
 
     def plotTS(self):
-	out.drawTimeSeries(self.inFileName,varName)
+	out.drawTimeSeries(self.inFileName, varName)
+
+    def convert(self):
+	out.Create_NETCDF_File(dims, self.inFileName, outFileName)
 
     def showDialog(self):
 	openFileName = QtGui.QFileDialog.getOpenFileName(self, 'Open file','../Data')
