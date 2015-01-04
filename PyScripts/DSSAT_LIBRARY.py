@@ -34,7 +34,8 @@ class	postProcess(object):
 
 	# Get variables and their corresponding simulation results from the output file
 	def	getVarValues(self, fileName):
-		FILE	= file('%s/%s'%(self._baseDir,fileName)).readlines()
+		FILE	= file('%s'%(fileName)).readlines()		# Interact with the pyQt GUI
+		#FILE	= file('%s/%s'%(self._baseDir,fileName)).readlines()
 		outData	= FILE[4:]
 		varId	= FILE[3]					# Read the raw variables 
 		varId	= map(str,str.split(varId)[12:])		# Only get the useful variables
