@@ -22,7 +22,7 @@ dims['tStep']   = 1
 
 baseDir         = '../Data'
 CDEFileName     = 'SUMMARYOUT.CDE'
-inFileName      = 'Summary.OUT'
+#inFileName      = 'Summary.OUT'
 outFileName     = 'Summary.nc'
 varName         = 'HWAM'
 
@@ -1104,12 +1104,15 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.actionAbout.setText(_translate("MainWindow", "About...", None))
 
     def plotTS(self):
-	out.drawTimeSeries(inFileName,varName)
+	out.drawTimeSeries(self.inFileName,varName)
 
     def showDialog(self):
-	filename = QtGui.QFileDialog.getOpenFileName(self, 'Open file','../Data')
-	file = open(filename)
-	data = file.read()
+	openFileName = QtGui.QFileDialog.getOpenFileName(self, 'Open file','../Data')
+	self.inFileName = unicode(openFileName)		# Convert the QString to normal python readable string.
+	# file = open(filename)
+	# data = file.read()
+	# print	data
+	# return unicode(filename)
 
     def closeEvent(self, event):
 	reply = QtGui.QMessageBox.question(self, 'Message',"Are you sure to quit?", QtGui.QMessageBox.Yes,QtGui.QMessageBox.No)
