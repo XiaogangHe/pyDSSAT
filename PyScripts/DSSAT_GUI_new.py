@@ -23,7 +23,7 @@ dims['tStep']   = 1
 baseDir         = '../Data'
 CDEFileName     = 'SUMMARYOUT.CDE'
 #inFileName      = 'Summary.OUT'
-outFileName     = 'Summary.nc'
+#outFileName     = 'Summary.nc'
 varName         = 'HWAM'
 
 out		= DSSAT.postProcess(baseDir, CDEFileName)
@@ -980,19 +980,19 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.actionLoad_Summary_out.setObjectName(_fromUtf8("actionLoad_Summary_out"))
 	self.actionLoad_Summary_out.setShortcut('Ctrl+O')
 	self.actionLoad_Summary_out.setStatusTip('Open Original File')
-	self.actionLoad_Summary_out.triggered.connect(self.showDialog)
+	self.actionLoad_Summary_out.triggered.connect(self.showDialogOpen)
 
         self.actionLoad_NetCDF_File = QtGui.QAction(MainWindow)
         self.actionLoad_NetCDF_File.setObjectName(_fromUtf8("actionLoad_NetCDF_File"))
 	self.actionLoad_NetCDF_File.setShortcut('Ctrl+N')
 	self.actionLoad_NetCDF_File.setStatusTip('Open NetCDF File')
-	self.actionLoad_NetCDF_File.triggered.connect(self.showDialog)
+	self.actionLoad_NetCDF_File.triggered.connect(self.showDialogOpen)
         
 	self.actionRecent_Files = QtGui.QAction(MainWindow)
         self.actionRecent_Files.setObjectName(_fromUtf8("actionRecent_Files"))
 	self.actionRecent_Files.setShortcut('Ctrl+R')
 	self.actionRecent_Files.setStatusTip('Open Recent File')
-	self.actionRecent_Files.triggered.connect(self.showDialog)
+	self.actionRecent_Files.triggered.connect(self.showDialogOpen)
         
 	self.actionExit = QtGui.QAction(MainWindow)
         self.actionExit.setObjectName(_fromUtf8("actionExit"))
@@ -1080,7 +1080,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.Ready_3.clicked.connect(self.plotTS)
 	
 	self.Ready_4.setText(_translate("MainWindow", "To NetCDF", None))
-	self.Ready_4.clicked.connect(self.convert)
+	self.Ready_4.clicked.connect(self.showDialogSave)
+	# self.Ready_4.clicked.connect(self.convert)
 
         self.label_20.setText(_translate("MainWindow", "Select a variable", None))
         self.label_4.setText(_translate("MainWindow", "pyDSSAT", None))
@@ -1111,13 +1112,18 @@ class Ui_MainWindow(QtGui.QMainWindow):
     def convert(self):
 	out.Create_NETCDF_File(dims, self.inFileName, outFileName)
 
-    def showDialog(self):
-	openFileName = QtGui.QFileDialog.getOpenFileName(self, 'Open file','../Data')
-	self.inFileName = unicode(openFileName)		# Convert the QString to normal python readable string.
+    def showDialogOpen(self):
+	openFileName 	= QtGui.QFileDialog.getOpenFileName(self, 'Open file','../Data')
+	self.inFileName	= unicode(openFileName)		# Convert the QString to normal python readable string.
 	# file = open(filename)
 	# data = file.read()
 	# print	data
 	# return unicode(filename)
+
+    def showDialogSave(self):
+	saveFileName	= QtGui.QFileDialog.getSaveFileName(self, 'Save file','../Data')
+	outFileName	= unicode(saveFileName)
+	out.Create_NETCDF_File(dims, self.inFileName, outFileName)
 
     def closeEvent(self, event):
 	reply = QtGui.QMessageBox.question(self, 'Message',"Are you sure to quit?", QtGui.QMessageBox.Yes,QtGui.QMessageBox.No)
