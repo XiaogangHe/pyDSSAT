@@ -24,7 +24,7 @@ baseDir         = '../Data'
 CDEFileName     = 'SUMMARYOUT.CDE'
 #inFileName      = 'Summary.OUT'
 #outFileName     = 'Summary.nc'
-varName         = 'HWAM'
+#varName         = 'HWAM'
 
 out		= DSSAT.postProcess(baseDir, CDEFileName)
 
@@ -47,6 +47,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
     def __init__(self):
         QtGui.QMainWindow.__init__(self)
         self.setupUi(self)
+	self.varName = 'HWAM'
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
@@ -1076,12 +1077,15 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.comboBox.setItemText(0, _translate("MainWindow", "Yield", None))
         self.comboBox.setItemText(1, _translate("MainWindow", "Precipitation", None))
         self.comboBox.setItemText(2, _translate("MainWindow", "Max Temperature", None))
+	#print self.comboBox.currentText()
+	self.comboBox.activated.connect(self.pass_Net_Adap)		# Activate comboBox
+
         self.Ready_3.setText(_translate("MainWindow", "Plot", None))
         self.Ready_3.clicked.connect(self.plotTS)
 	
 	self.Ready_4.setText(_translate("MainWindow", "To NetCDF", None))
 	self.Ready_4.clicked.connect(self.showDialogSave)
-	# self.Ready_4.clicked.connect(self.convert)
+        #self.Ready_4.clicked.connect(self.convert)
 
         self.label_20.setText(_translate("MainWindow", "Select a variable", None))
         self.label_4.setText(_translate("MainWindow", "pyDSSAT", None))
@@ -1107,10 +1111,21 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.actionAbout.setText(_translate("MainWindow", "About...", None))
 
     def plotTS(self):
-	out.drawTimeSeries(self.inFileName, varName)
+	if self.selectFullVar == 'Yield':
+		self.varName = 'HWAM'
+	elif self.selectFullVar == 'Precipitation':
+		self.varName = 'PRCM'
+	elif self.selectFullVar == 'Max Temperature':
+		self.varName = 'TMAXA'
 
+	out.drawTimeSeries(self.inFileName, self.varName)
+
+    '''
     def convert(self):
 	out.Create_NETCDF_File(dims, self.inFileName, outFileName)
+	print 'OK'
+	print self.selectFullVar
+    '''
 
     def showDialogOpen(self):
 	openFileName 	= QtGui.QFileDialog.getOpenFileName(self, 'Open file','../Data')
@@ -1124,6 +1139,9 @@ class Ui_MainWindow(QtGui.QMainWindow):
 	saveFileName	= QtGui.QFileDialog.getSaveFileName(self, 'Save file','../Data')
 	outFileName	= unicode(saveFileName)
 	out.Create_NETCDF_File(dims, self.inFileName, outFileName)
+
+    def pass_Net_Adap(self):
+	self.selectFullVar = str(self.comboBox.currentText())
 
     def closeEvent(self, event):
 	reply = QtGui.QMessageBox.question(self, 'Message',"Are you sure to quit?", QtGui.QMessageBox.Yes,QtGui.QMessageBox.No)
