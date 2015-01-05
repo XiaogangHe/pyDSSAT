@@ -11,6 +11,9 @@ import	sys
 from	PyQt4		import	QtCore, QtGui
 import  DSSAT_LIBRARY	as	DL
 import	example
+import	FILEX_LIBRARY	as	FL
+
+fileBatCtl 	= FL.File(crop='maize', weather='DTCM', st_yr=1948, ed_yr=2010, plant_month=6,plant_date=10, mode='S')
 
 # Basic settings
 dims            = {}
@@ -1185,7 +1188,10 @@ class Ui_MainWindow(QtGui.QMainWindow):
     def getHarvestDay(self):
 	self.hDay = self.harvestDay.value()
 	print	self.hDay
-    
+
+    def genBatCtlFile(self):
+	FL.File(crop='maize', weather='DTCM', st_yr=self.sYear, ed_yr=self.eYear, plant_month=self.pMon,plant_date=self.pDay, mode=self.runMode)
+
     def closeEvent(self, event):
 	reply = QtGui.QMessageBox.question(self, 'Message',"Are you sure to quit?", QtGui.QMessageBox.Yes,QtGui.QMessageBox.No)
 	if reply == QtGui.QMessageBox.Yes:
@@ -1202,7 +1208,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
 		self.runMode	= 'B'
 	elif self.selectRunMode	== 'Debug':
 		self.runMode	= 'D'
-	
+
+	self.genBatCtlFile()
 	example.csm(self.runMode, batchFile, ctlFile)
 	reply = QtGui.QMessageBox.information(self, 'Message',"Successfully run DSSAT!")
 	return
