@@ -13,8 +13,6 @@ import  DSSAT_LIBRARY	as	DL
 import	example
 import	FILEX_LIBRARY	as	FL
 
-fileBatCtl 	= FL.File(crop='maize', weather='DTCM', st_yr=1948, ed_yr=2010, plant_month=6,plant_date=10, mode='S')
-
 # Basic settings
 dims            = {}
 dims['nlat']    = 1
@@ -30,8 +28,8 @@ CDEFileName     = 'SUMMARYOUT.CDE'
 #outFileName     = 'Summary.nc'
 #varName         = 'HWAM'
 #runMode	= 'S'
-batchFile	= 'test.v45'
-ctlFile		= 'DSCSM045.CTR'
+batchFile	= 'run.v45'
+ctlFile		= '../DSCSM045.CTR'
 
 out		= DL.postProcess(baseDir, CDEFileName)
 
@@ -444,7 +442,9 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.comboBox_5.addItem(_fromUtf8(""))
         self.comboBox_5.addItem(_fromUtf8(""))
         self.comboBox_5.addItem(_fromUtf8(""))
-        self.label_14 = QtGui.QLabel(self.centralwidget)
+	self.comboBox_5.activated.connect(self.passCropType)		# Activate comboBox
+        
+	self.label_14 = QtGui.QLabel(self.centralwidget)
         self.label_14.setGeometry(QtCore.QRect(140, 80, 111, 23))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Georgia"))
@@ -461,7 +461,9 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.comboBox_6.addItem(_fromUtf8(""))
         self.comboBox_6.addItem(_fromUtf8(""))
         self.comboBox_6.addItem(_fromUtf8(""))
-        self.label_15 = QtGui.QLabel(self.centralwidget)
+	self.comboBox_6.activated.connect(self.passSoilType)		# Activate comboBox
+        
+	self.label_15 = QtGui.QLabel(self.centralwidget)
         self.label_15.setGeometry(QtCore.QRect(10, 130, 201, 23))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Georgia"))
@@ -477,7 +479,9 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.comboBox_7.setObjectName(_fromUtf8("comboBox_7"))
         self.comboBox_7.addItem(_fromUtf8(""))
         self.comboBox_7.addItem(_fromUtf8(""))
-        self.label = QtGui.QLabel(self.centralwidget)
+	self.comboBox_7.activated.connect(self.passWeaStation)		# Activate comboBox
+        
+	self.label = QtGui.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(10, 50, 161, 23))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Georgia"))
@@ -1160,9 +1164,18 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def passPlotVar(self):
 	self.selectFullVar = str(self.comboBox.currentText())
-
+    
     def passRunMode(self):
 	self.selectRunMode = str(self.comboBox_4.currentText())
+
+    def passCropType(self):
+	self.selectCropType = str(self.comboBox_5.currentText())
+    
+    def passSoilType(self):
+	self.selectSoilType = str(self.comboBox_6.currentText())
+    
+    def passWeaStation(self):
+	self.selectWeaStation = str(self.comboBox_7.currentText())
    
     # Get the spinbox value for simulation year 
     def getSimStartYear(self):
@@ -1190,7 +1203,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 	print	self.hDay
 
     def genBatCtlFile(self):
-	FL.File(crop='maize', weather='DTCM', st_yr=self.sYear, ed_yr=self.eYear, plant_month=self.pMon,plant_date=self.pDay, mode=self.runMode)
+	FL.File(crop=self.selectCropType, weather=self.selectWeaStation, st_yr=self.sYear, ed_yr=self.eYear, plant_month=self.pMon,plant_date=self.pDay, mode=self.runMode)
 
     def closeEvent(self, event):
 	reply = QtGui.QMessageBox.question(self, 'Message',"Are you sure to quit?", QtGui.QMessageBox.Yes,QtGui.QMessageBox.No)
