@@ -26,7 +26,7 @@ CDEFileName     = 'SUMMARYOUT.CDE'
 #inFileName      = 'Summary.OUT'
 #outFileName     = 'Summary.nc'
 #varName         = 'HWAM'
-runMode		= 'S'
+#runMode	= 'S'
 batchFile	= 'test.v45'
 ctlFile		= 'DSCSM045.CTR'
 
@@ -50,7 +50,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
     def __init__(self):
         QtGui.QMainWindow.__init__(self)
         self.setupUi(self)
-	self.varName = 'HWAM'
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
@@ -1081,7 +1080,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.comboBox.setItemText(1, _translate("MainWindow", "Precipitation", None))
         self.comboBox.setItemText(2, _translate("MainWindow", "Max Temperature", None))
 	#print self.comboBox.currentText()
-	self.comboBox.activated.connect(self.pass_Net_Adap)		# Activate comboBox
+	self.comboBox.activated.connect(self.passPlotVar)		# Activate comboBox
 
         self.Ready_3.setText(_translate("MainWindow", "Plot", None))
         self.Ready_3.clicked.connect(self.plotTS)
@@ -1094,12 +1093,14 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.label_4.setText(_translate("MainWindow", "pyDSSAT", None))
         self.label_17.setText(_translate("MainWindow", "2015 © APC 524 Project.", None))
         self.label_18.setText(_translate("MainWindow", "Princeton University", None))
-        self.comboBox_4.setItemText(0, _translate("MainWindow", "Sensitivity", None))
-        self.comboBox_4.setItemText(1, _translate("MainWindow", "Spatial", None))
-        self.comboBox_4.setItemText(2, _translate("MainWindow", "Seasonal", None))
-        self.comboBox_4.setItemText(3, _translate("MainWindow", "Batch", None))
-        self.comboBox_4.setItemText(4, _translate("MainWindow", "Debug", None))
-        self.Ready_2.setText(_translate("MainWindow", "Reinitialize", None))
+	
+        self.comboBox_4.setItemText(0, _translate("MainWindow", "Spatial", None))
+        self.comboBox_4.setItemText(1, _translate("MainWindow", "Seasonal", None))
+        self.comboBox_4.setItemText(2, _translate("MainWindow", "Batch", None))
+        self.comboBox_4.setItemText(3, _translate("MainWindow", "Debug", None))
+	self.comboBox_4.activated.connect(self.passRunMode)		# Activate comboBox
+        
+	self.Ready_2.setText(_translate("MainWindow", "Reinitialize", None))
         self.menuFile.setTitle(_translate("MainWindow", "File", None))
         self.menuHelp.setTitle(_translate("MainWindow", "Help", None))
         self.actionLoad_Summary_out.setText(_translate("MainWindow", "Load Summary.out", None))
@@ -1143,9 +1144,12 @@ class Ui_MainWindow(QtGui.QMainWindow):
 	outFileName	= unicode(saveFileName)
 	out.Create_NETCDF_File(dims, self.inFileName, outFileName)
 
-    def pass_Net_Adap(self):
+    def passPlotVar(self):
 	self.selectFullVar = str(self.comboBox.currentText())
 
+    def passRunMode(self):
+	self.selectRunMode = str(self.comboBox_4.currentText())
+    
     def closeEvent(self, event):
 	reply = QtGui.QMessageBox.question(self, 'Message',"Are you sure to quit?", QtGui.QMessageBox.Yes,QtGui.QMessageBox.No)
 	if reply == QtGui.QMessageBox.Yes:
@@ -1154,7 +1158,16 @@ class Ui_MainWindow(QtGui.QMainWindow):
 		event.ignore()
 
     def runModelEvent(self, event):
-	example.csm(runMode, batchFile, ctlFile)
+	if self.selectRunMode 	== 'Spatial':
+		self.runMode	= 'S'
+	elif self.selectRunMode	== 'Seasonal':
+		self.runMode	= 'N'
+	elif self.selectRunMode	== 'Batch':
+		self.runMode	= 'B'
+	elif self.selectRunMode	== 'Debug':
+		self.runMode	= 'D'
+	
+	example.csm(self.runMode, batchFile, ctlFile)
 	reply = QtGui.QMessageBox.information(self, 'Message',"Successfully run DSSAT!")
 	return
 
