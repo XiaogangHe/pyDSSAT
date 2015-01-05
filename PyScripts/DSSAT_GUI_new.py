@@ -9,8 +9,9 @@
 
 import	sys
 from	PyQt4		import	QtCore, QtGui
-import  DSSAT_LIBRARY	as	DSSAT
- 		 
+import  DSSAT_LIBRARY	as	DL
+import	example
+
 # Basic settings
 dims            = {}
 dims['nlat']    = 1
@@ -25,9 +26,11 @@ CDEFileName     = 'SUMMARYOUT.CDE'
 #inFileName      = 'Summary.OUT'
 #outFileName     = 'Summary.nc'
 #varName         = 'HWAM'
+runMode		= 'S'
+batchFile	= 'xxx'
+ctlFile		= 'xxx'
 
-out		= DSSAT.postProcess(baseDir, CDEFileName)
-
+out		= DL.postProcess(baseDir, CDEFileName)
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -1151,6 +1154,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 		event.ignore()
 
     def runModelEvent(self, event):
+	example.CSM('runMode', 'batchFile', 'ctlFile')
 	reply = QtGui.QMessageBox.information(self, 'Message',"Successfully run DSSAT!")
 	return
 
