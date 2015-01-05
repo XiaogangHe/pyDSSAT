@@ -11,7 +11,7 @@ gc.collect()
 
 
 class File():
-	def __init__(self, crop='maize', weather='DTCM', st_yr=1948, ed_yr=2012, plant_month=6, plant_date=10, mode='S'):
+	def __init__(self, crop='Maize', weather='DTCM', st_yr=1948, ed_yr=2012, plant_month=6, plant_date=10, mode='S'):
 
 		# initialization
 		self.crop = crop
@@ -107,7 +107,7 @@ class File():
 		# Cultivar
 		file.write("\n*CULTIVARS\n")
 		file.write("@C CR INGENO CNAME\n")
-		if self.crop == "maize":
+		if self.crop == "Maize":
 			file.write("%2s %s %s %s %d\n" % (1, "MZ", "IB0012", "PIO", 3382))
 		else:
 			print "ERROR cultivar"
