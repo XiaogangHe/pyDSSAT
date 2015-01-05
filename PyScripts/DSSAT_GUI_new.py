@@ -102,6 +102,9 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.spinBox.setMaximum(2015)
         self.spinBox.setObjectName(_fromUtf8("spinBox"))
         self.horizontalLayout.addWidget(self.spinBox)
+	self.simStartYear = self.spinBox
+        self.simStartYear.valueChanged.connect(self.getSimStartYear)
+
         self.label_6 = QtGui.QLabel(self.verticalLayoutWidget_3)
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Arial"))
@@ -117,7 +120,10 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.spinBox_2.setMaximum(2015)
         self.spinBox_2.setObjectName(_fromUtf8("spinBox_2"))
         self.horizontalLayout.addWidget(self.spinBox_2)
-        self.label_2 = QtGui.QLabel(self.centralwidget)
+	self.simEndYear = self.spinBox_2
+        self.simEndYear.valueChanged.connect(self.getSimEndYear)
+        
+	self.label_2 = QtGui.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(10, 180, 201, 23))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Georgia"))
@@ -174,7 +180,10 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.spinBox_3.setMaximum(12)
         self.spinBox_3.setObjectName(_fromUtf8("spinBox_3"))
         self.horizontalLayout_2.addWidget(self.spinBox_3)
-        self.label_9 = QtGui.QLabel(self.verticalLayoutWidget_4)
+	self.plantMon = self.spinBox_3
+        self.plantMon.valueChanged.connect(self.getPlantMon)
+
+	self.label_9 = QtGui.QLabel(self.verticalLayoutWidget_4)
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Arial"))
         font.setPointSize(16)
@@ -189,7 +198,10 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.spinBox_4.setMaximum(31)
         self.spinBox_4.setObjectName(_fromUtf8("spinBox_4"))
         self.horizontalLayout_2.addWidget(self.spinBox_4)
-        self.label_10 = QtGui.QLabel(self.centralwidget)
+	self.plantDay = self.spinBox_4
+        self.plantDay.valueChanged.connect(self.getPlantDay)
+        
+	self.label_10 = QtGui.QLabel(self.centralwidget)
         self.label_10.setGeometry(QtCore.QRect(10, 300, 201, 23))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Georgia"))
@@ -224,7 +236,10 @@ class Ui_MainWindow(QtGui.QMainWindow):
 	self.spinBox_5.setMaximum(12)
         self.spinBox_5.setObjectName(_fromUtf8("spinBox_5"))
         self.horizontalLayout_4.addWidget(self.spinBox_5)
-        self.label_12 = QtGui.QLabel(self.verticalLayoutWidget_6)
+	self.harvestMon = self.spinBox_5
+        self.harvestMon.valueChanged.connect(self.getHarvestMon)
+        
+	self.label_12 = QtGui.QLabel(self.verticalLayoutWidget_6)
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Arial"))
         font.setPointSize(16)
@@ -239,7 +254,10 @@ class Ui_MainWindow(QtGui.QMainWindow):
 	self.spinBox_6.setMaximum(31)
         self.spinBox_6.setObjectName(_fromUtf8("spinBox_6"))
         self.horizontalLayout_4.addWidget(self.spinBox_6)
-        self.Ready = QtGui.QPushButton(self.centralwidget)
+	self.harvestDay = self.spinBox_6
+        self.harvestDay.valueChanged.connect(self.getHarvestDay)
+        
+	self.Ready = QtGui.QPushButton(self.centralwidget)
         self.Ready.setGeometry(QtCore.QRect(10, 360, 131, 60))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
@@ -1124,13 +1142,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
 	out.drawTimeSeries(self.inFileName, self.varName)
 
-    '''
-    def convert(self):
-	out.Create_NETCDF_File(dims, self.inFileName, outFileName)
-	print 'OK'
-	print self.selectFullVar
-    '''
-
     def showDialogOpen(self):
 	openFileName 	= QtGui.QFileDialog.getOpenFileName(self, 'Open file','../Data')
 	self.inFileName	= unicode(openFileName)		# Convert the QString to normal python readable string.
@@ -1149,6 +1160,31 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def passRunMode(self):
 	self.selectRunMode = str(self.comboBox_4.currentText())
+   
+    # Get the spinbox value for simulation year 
+    def getSimStartYear(self):
+	self.sYear = self.simStartYear.value()
+	print	self.sYear
+    
+    def getSimEndYear(self):
+	self.eYear = self.simEndYear.value()
+	print	self.eYear
+
+    def getPlantMon(self):
+	self.pMon = self.plantMon.value()
+	print	self.pMon
+
+    def getPlantDay(self):
+	self.pDay = self.plantDay.value()
+	print	self.pDay
+    
+    def getHarvestMon(self):
+	self.hMon = self.harvestMon.value()
+	print	self.hMon
+
+    def getHarvestDay(self):
+	self.hDay = self.harvestDay.value()
+	print	self.hDay
     
     def closeEvent(self, event):
 	reply = QtGui.QMessageBox.question(self, 'Message',"Are you sure to quit?", QtGui.QMessageBox.Yes,QtGui.QMessageBox.No)
