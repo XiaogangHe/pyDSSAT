@@ -64,7 +64,7 @@ DPNUM	DM-N upt Prod		Dry matter-N uptake productivity (kg[DM]/kg[N uptake]
 YPNAM	No record		No record
 YPNUM	No record		No record
 NDCH	Days to harvest		Number of days from planting to harvest (d)
-TMAXA	Maximum temp °C		Avg maximum air temperature (°C)
+TMAXA	Maximum temp C		Avg maximum air temperature (C)
 TMINA	Minimum temp °C		Avg minimum air temperature (°C)
 SRADA	Avg solar rad		Average solar radiation (MJ/m2/d), planting - harvest
 DAYLA	Avg day (hr)		Average daylength (hr/d), planting to harvest
