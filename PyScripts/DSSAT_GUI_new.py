@@ -27,8 +27,8 @@ CDEFileName     = 'SUMMARYOUT.CDE'
 #outFileName     = 'Summary.nc'
 #varName         = 'HWAM'
 runMode		= 'S'
-batchFile	= 'xxx'
-ctlFile		= 'xxx'
+batchFile	= 'test.v45'
+ctlFile		= 'DSCSM045.CTR'
 
 out		= DL.postProcess(baseDir, CDEFileName)
 
@@ -1154,7 +1154,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 		event.ignore()
 
     def runModelEvent(self, event):
-	example.CSM('runMode', 'batchFile', 'ctlFile')
+	example.csm(runMode, batchFile, ctlFile)
 	reply = QtGui.QMessageBox.information(self, 'Message',"Successfully run DSSAT!")
 	return
 
