@@ -8,10 +8,10 @@
 # WARNING! All changes made in this file will be lost!
 
 import	sys
-from	PyQt4		import	QtCore, QtGui
-import  DSSAT_LIBRARY	as	DL
+from	PyQt4			import	QtCore, QtGui
+import  POSTPROCESS_LIBRARY	as	PL
 import	example
-import	FILEX_LIBRARY	as	FL
+import	FILEX_LIBRARY		as	FL
 
 # Basic settings
 dims            = {}
@@ -31,7 +31,7 @@ CDEFileName     = 'SUMMARYOUT.CDE'
 batchFile	= 'run.v45'
 ctlFile		= '../DSCSM045.CTR'
 
-out		= DL.postProcess(baseDir, CDEFileName)
+out		= PL.postProcess(baseDir, CDEFileName)
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
