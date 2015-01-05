@@ -143,11 +143,11 @@ class File():
 		file.write("\n*PLANTING DETAILS\n")
 		file.write(
 			"@P PDATE EDATE  PPOP  PPOE  PLME  PLDS  PLRS  PLRD  PLDP  PLWT  PAGE  PENV  PLPH  SPRL                        PLNAME\n")
-		date = dt.datetime(self.st_yr, self.plant_month, self.plant_date)
-		doy = date.strftime("%y%j")
+		pdate = dt.datetime(self.st_yr, self.plant_month, self.plant_date)
+		pdoy = pdate.strftime("%y%j")
 		file.write(
 			"%2s %5s  %d   %.1f    %.1f     %s     %s     %d    %d    %d    %d   %d   %d   %d   %d                      %d\n" % (
-				1, doy, -99, 4.4, 4.4, "S", "R", 50, 0, 4, -99, -99, -99, -99, -99, -99))
+				1, pdoy, -99, 4.4, 4.4, "S", "R", 50, 0, 4, -99, -99, -99, -99, -99, -99))
 
 		# fertilizers
 		file.write("\n*FERTILIZERS (INORGANIC)\n")
@@ -159,7 +159,9 @@ class File():
 		file.write("\n*SIMULATION CONTROLS\n")
 
 		file.write("@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL\n")
-		file.write("%2s %2s             %d     %d     %s %5s  %d %s\n" % (1, "GE", 30, 1, "S", doy, 2150, "DEFAULT"))
+		num_yr = self.ed_yr - self.st_yr + 1
+		sdoy = pdoy
+		file.write("%2s %2s             %2s     %d     %s %5s  %d %s\n" % (1, "GE", str(num_yr), 1, "S", sdoy, 2150, "DEFAULT"))
 
 		file.write("@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2\n")
 		file.write("%2s %2s              %s     %s     %s     %s     %s     %s     %s     %s     %s\n" % (1, "OP", "Y", "Y", "Y", "N", "N", "N", "N", "Y", "D"))
