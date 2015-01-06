@@ -10,8 +10,49 @@ import	example
 
 gc.collect()
 
+class Model(object):
+    def __init__(self, rnmode = 'S', fileb = '', filectl = '', filex = '', fileio = '', trnarg = '', output_file_name = 'Summary.OUT'):
+        self._rnmode = rnmode
+        self._fileb = fileb
+        self._filectl = filectl
+        self._filex = filex
+        self._fileio = fileio
+        self._trnarg = trnarg
+        self._output_file_name = output_file_name
+        self._work_path = os.getcwd()
+        self._crop_type = ''
+        self._soil_type = ''
+    # self._modelarg = modelarg
+    def run(self):
+        # Run DSSAT Model
+        
+        self._rnmode.upper()
+        
+        # Select mode the DSSAT model use
+        if self._rnmode == 'A':
+            assert self._fileb.strip()
+            assert self._filectl.strip()
+        elif self._rnmode == 'C' or self._rnmode == 'G':
+            assert self._filex.strip()
+            assert self._trnarg.strip()
+            assert self._filectl.strip()
+            assert self._trnarg.strip()
+        elif self._rnmode == 'B' or 'N' or 'Q' or 'S' or 'F' or 'T' or 'E' or 'L':
+            assert self._fileb.strip()
+            assert self._filectl.strip()
+        elif self._rnmode == 'D':
+            assert self._fileio.strip()
+        else: raise Exception("You should input right DSSAT mode! Choose one of the following characters: A B C D E F G L N Q S T")
+        
+        # Call the Wrapped fortran code
+        example.csm(self._rnmode, self._fileb, self._filectl, self._filex, self._fileio, self._trnarg)
+        
+        # Check whether we have get the output file
+        file_path = self._work_path + self._output_file_name
+        assert os.path.exists(file_path)
 
-class File():
+
+class File(object):
 	def __init__(self, crop='Maize', weather='DTCM', st_yr=1948, ed_yr=2012, plant_month=6, plant_date=10, mode='S'):
 
 		# initialization
