@@ -7,11 +7,10 @@
 #
 # WARNING! All changes made in this file will be lost!
 
+import	os
 import	sys
 from	PyQt4			import	QtCore, QtGui
-import  POSTPROCESS_LIBRARY	as	PL
-import	example
-import	FILEX_LIBRARY		as	FL
+import  DSSAT_LIBRARY		as	DL
 
 # Basic settings
 dims            = {}
@@ -31,7 +30,7 @@ CDEFileName     = 'SUMMARYOUT.CDE'
 batchFile	= 'run.v45'
 ctlFile		= '../DSCSM045.CTR'
 
-out		= PL.postProcess(baseDir, CDEFileName)
+out		= DL.postProcess(baseDir, CDEFileName)
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -1126,6 +1125,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
 	self.comboBox_4.activated.connect(self.passRunMode)		# Activate comboBox
         
 	self.Ready_2.setText(_translate("MainWindow", "Reinitialize", None))
+	self.Ready_2.clicked.connect(self.reInitialize)
+
         self.menuFile.setTitle(_translate("MainWindow", "File", None))
         self.menuHelp.setTitle(_translate("MainWindow", "Help", None))
         self.actionLoad_Summary_out.setText(_translate("MainWindow", "Load Summary.out", None))
@@ -1203,7 +1204,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 	print	self.hDay
 
     def genBatCtlFile(self):
-	FL.File(crop=self.selectCropType, weather=self.selectWeaStation, st_yr=self.sYear, ed_yr=self.eYear, plant_month=self.pMon,plant_date=self.pDay, mode=self.runMode)
+	DL.File(crop=self.selectCropType, weather=self.selectWeaStation, st_yr=self.sYear, ed_yr=self.eYear, plant_month=self.pMon,plant_date=self.pDay, mode=self.runMode)
 
     def closeEvent(self, event):
 	reply = QtGui.QMessageBox.question(self, 'Message',"Are you sure to quit?", QtGui.QMessageBox.Yes,QtGui.QMessageBox.No)
@@ -1223,9 +1224,14 @@ class Ui_MainWindow(QtGui.QMainWindow):
 		self.runMode	= 'D'
 
 	self.genBatCtlFile()
-	example.csm(self.runMode, batchFile, ctlFile)
+	new_model = DL.Model(self.runMode, fileb = batchFile, filectl = ctlFile)
+	new_model.run()
 	reply = QtGui.QMessageBox.information(self, 'Message',"Successfully run DSSAT!")
 	return
+
+    def reInitialize(self):
+        os.system('rm %s'%(batchFile))
+	os.system('rm %s%s.GSX'%(self.selectWeaStation,self.sYear))
 
 if __name__ == "__main__":
         app = QtGui.QApplication(sys.argv)
