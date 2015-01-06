@@ -44,7 +44,7 @@ C  02/20/2006 GH  Add RNMODE="G" option for GENCALC
 !  01/11/2007 CHP Changed GETPUT calls to GET and PUT
 !  01/12/2007 CHP Read trt number and rotation number for sequence mode
 C=======================================================================
-      function CSM(RNMODE, FILEB, FILECTL)
+      function CSM(RNMODE, FILEB, FILECTL, FILEX, FILEIO, TRNARG)
 
       USE ModuleDefs 
       USE ModuleData
@@ -54,12 +54,15 @@ C=======================================================================
       character*1 :: RNMODE
       character*30 :: FILEB
       character*120 :: FILECTL
+      CHARACTER*12 :: FILEX
+      CHARACTER*30 :: FILEIO
+      CHARACTER*6 :: TRNARG
 C-----------------------------------------------------------------------
       CHARACTER*1   ANS,BLANK,UPCASE!,RNMODE
-      CHARACTER*6   ERRKEY,FINDCH,TRNARG
+      CHARACTER*6   ERRKEY,FINDCH
       CHARACTER*8   FNAME,DUMMY,MODELARG
-      CHARACTER*12  FILEX   !,DSCSM,INPUT
-      CHARACTER*30  FILEIO,FILEIOH!,FILEB
+!,DSCSM,INPUT
+      CHARACTER*30  FILEIOH!,FILEB
       CHARACTER*78  MSG(10)
       CHARACTER*80  PATHEX
       CHARACTER*102 DSSATP
@@ -93,19 +96,16 @@ C     The variable "ISWITCH" is of type "SwitchType".
       DONE = .FALSE.
       YRDOY_END = 9999999
 
-      print *,'hello1'
 !     OPSYS defined in ModuleDefs.
       CALL SETOP()  
 
       !Delete existing output files
       CALL OPCLEAR
-      print *,'hello2'
 
       CALL GETLUN('FILEIO', LUNIO)
       FILEIO = 'DSSAT45.INP'
       
       DUMMY = RNMODE
-      print *,'hello3'
 C-----------------------------------------------------------------------
 C    Get argument from runtime module to determine path of the EXE files
 C-----------------------------------------------------------------------
@@ -123,7 +123,6 @@ C-----------------------------------------------------------------------
 !        CALL GETARG(2,RNMODE)    !,IP
         NARG = 2
       ENDIF
-      print *, NARG
 
 C-----------------------------------------------------------------------
 C     RNMODE:  
@@ -150,53 +149,47 @@ C-----------------------------------------------------------------------
       RNMODE = UPCASE(RNMODE)
       ROTNUM = 0
       TRTNUM = 0
-!      SELECT CASE(RNMODE)
+      SELECT CASE(RNMODE)
 
 !     Read experiment file from command line -- run all treatments
-!     CASE('A')   !run All treatments
+      CASE('A')   !run All treatments
 !        CALL GETARG(NARG+1,FILEX)   !,IP   !Experiment file
 !        CALL GETARG(NARG+2,FILECTL) !,IP   !Simulation control file name
 
 !     Read experiment file and treatment number from command line
-!      CASE('C','G')   !Command line, Gencalc
+      CASE('C','G')   !Command line, Gencalc
 !        CALL GETARG(NARG+1,FILEX)   !,IP   !Experiment file
 !        CALL GETARG(NARG+2,TRNARG)  !,IP   !Treatment number
 !        CALL GETARG(NARG+3,FILECTL) !,IP   !Simulation control file name
-!        READ(TRNARG,'(I6)') TRTNUM
+        READ(TRNARG,'(I6)') TRTNUM
 
 !     Get experiment and treatment from batch file
-!      CASE('B','N','Q','S','F','T','E','L')
+      CASE('B','N','Q','S','F','T','E','L')
 !           Batch, seasoNal, seQuence, Spatial, 
 !           Farm, Gencalc(T), sEnsitivity, Locus 
 !        CALL GETARG(NARG+1,FILEB)   !,IP   !Batch file name
 !        CALL GETARG(NARG+2,FILECTL) !,IP   !Simulation control file name
 
 !     Debug mode -- bypass input module and read FILEIO
-!      CASE ('D')  !Debug
+      CASE ('D')  !Debug
 !        CALL GETARG(NARG+1,FILEIO)  !,IP   !INP file
-!        DO I = 1, LEN(FILEIO)
-!          FILEIO(I:I) = UPCASE(FILEIO(I:I))
-!          ROTNUM = 0
-!          TRTNUM = 0
-!        END DO
+        DO I = 1, LEN(FILEIO)
+          FILEIO(I:I) = UPCASE(FILEIO(I:I))
+          ROTNUM = 0
+          TRTNUM = 0
+        END DO
         
 !     Interactive mode, no command line arguments     
-!      CASE DEFAULT    !Interactive mode.  
-!        RNMODE = 'I'
-!      END SELECT
+      CASE DEFAULT    !Interactive mode.  
+        RNMODE = 'I'
+      END SELECT
 
 C-----------------------------------------------------------------------
 C    Delete previouse copies of temporary input file
 C-----------------------------------------------------------------------
-      print *, 'hello4'
-      print *, FEXIST 
-      print *, RNMODE 
       IF (RNMODE .NE. 'D') THEN
         INQUIRE (FILE = FILEIO,EXIST = FEXIST)
-          print *, FILEIO
-          print *, FEXIST
         IF (FEXIST) THEN
-          print *, 'hello if'
           OPEN (LUNIO, FILE = FILEIO,STATUS = 'UNKNOWN',IOSTAT=ERRNUM)
           CLOSE (LUNIO,STATUS = 'DELETE')
         ENDIF
@@ -204,9 +197,6 @@ C-----------------------------------------------------------------------
         FILEIOH = FILEIO
         WRITE(FILEIOH(LN:LN),'(A1)') 'H'
         INQUIRE (FILE = FILEIOH,EXIST = FEXIST)
-        print *, 'hello FEXIST'
-        print *, FILEIOH
-        print *, LN
         IF (FEXIST) THEN
           OPEN (LUNIO, FILE = FILEIOH,STATUS = 'UNKNOWN',IOSTAT=ERRNUM)
           CLOSE (LUNIO,STATUS = 'DELETE')
@@ -220,11 +210,9 @@ C-----------------------------------------------------------------------
            FINDCH='$BATCH'
            OPEN (LUNBIO, FILE = FILEB,STATUS = 'UNKNOWN',IOSTAT=ERRNUM)
            IF (ERRNUM .NE. 0) CALL ERROR (ERRKEY,28,FILEB,LINBIO)
-           print *, 'ERROR2-->OK'
            CALL FIND (LUNBIO,FINDCH,LINBIO,IFIND)
            IF (IFIND .EQ. 0) CALL ERROR (ERRKEY,26,FILEB,LINBIO)
         ENDIF
-        print *, 'ERROR3-->OK'
       ENDIF 
 
 C-----------------------------------------------------------------------
@@ -233,7 +221,6 @@ C-----------------------------------------------------------------------
       RUN   = 0
       REPNO = 1
       CONTROL % REPNO = REPNO
-      print *, 'hello5'
 
 C*********************************************************************** 
 C*********************************************************************** 
@@ -262,7 +249,6 @@ C***********************************************************************
           GO TO 2000
         ENDIF
       ENDIF
-      print *, 'ERROR4-->ok'
       IF (INDEX('Q',RNMODE) .GT. 0) THEN
         CALL IGNORE (LUNBIO,LINBIO,ISECT,CHARTEST)
         IF (ISECT .EQ. 0 .OR. RUN .EQ. 1) THEN
@@ -276,7 +262,6 @@ C***********************************************************************
         READ (CHARTEST(93:113),110,IOSTAT=ERRNUM) TRTNUM,TRTREP,ROTNUM
         IF (ERRNUM .NE. 0) CALL ERROR (ERRKEY,26,FILEB,LINBIO)
       ENDIF
-      print *, 'ERROR5-->ok'
 
       CONTROL % FILEIO  = FILEIO
       CONTROL % FILEX   = FILEX
@@ -290,15 +275,6 @@ C-----------------------------------------------------------------------
 C    Run INPUT module
 C-----------------------------------------------------------------------
       IF (RNMODE .NE. 'D') THEN
-        print *, FILECTL
-        print *, FILEIO
-        print *, FILEX
-        print *, MODELLARG
-        print *, PATHEX
-        print *, RNMODE
-        print *, ROTNUM
-        print *, RUN
-        print *, TRTNUM
     
         CALL INPUT_SUB(
      &    FILECTL, FILEIO, FILEX, MODELARG, PATHEX,       !Input
@@ -312,12 +288,10 @@ C-----------------------------------------------------------------------
 C-----------------------------------------------------------------------
 C    Check to see if the temporary file exists
 C-----------------------------------------------------------------------
-      print *, 'print OK'
       INQUIRE (FILE = FILEIO,EXIST = FEXIST)
       IF (.NOT. FEXIST) THEN
         CALL ERROR(ERRKEY,2,FILEIO,LUNIO)
       ENDIF
-      print *, 'ERROR6'      
 
       OPEN (LUNIO, FILE = FILEIO,STATUS = 'OLD',IOSTAT=ERRNUM)
       IF (ERRNUM .NE. 0) CALL ERROR (ERRKEY,ERRNUM,FILEIO,0)
