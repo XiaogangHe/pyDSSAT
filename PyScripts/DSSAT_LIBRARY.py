@@ -11,7 +11,7 @@ import	example
 gc.collect()
 
 class Model(object):
-    def __init__(self, rnmode = 'S', fileb = '', filectl = '', filex = '', fileio = '', trnarg = '', output_file_name = 'Summary.OUT'):
+    def __init__(self, rnmode = 'S', fileb = '', filectl = '', filex = '', fileio = '', trnarg = '', output_file_name = '/Summary.OUT'):
         self._rnmode = rnmode
         self._fileb = fileb
         self._filectl = filectl
