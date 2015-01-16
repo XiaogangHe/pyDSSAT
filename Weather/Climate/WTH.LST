@@ -1,0 +1,51 @@
+*WEATHER LIST
+
+@#   FILENAME EXT SITE NAME.................  LAT.....  LONG.... ELEV.  TAV.. TAMP..
+   1 AUCR     CLI Crossville,Alabama,USA       34.250  -85.960   573  15.1  10.4  16
+   2 BGDP     CLI DINAJPUR,BANGLADESH          25.800   88.200   200  24.8   6.1  16
+   3 BRJD     CLI GAZIPUR                      24.000   92.230     8  25.6   5.2  15
+   4 BRRI     CLI BRRI_jOYEDBPUR               24.000   92.230     8  26.0   6.9  16
+   5 CCCA     CLI CIAT-CARIMAGUA-COLOMBIA       4.620  -71.620   180  26.7   1.4  15
+   6 CCPA     CLI Palmira,Valle,Colombia        3.480  -76.350   965  24.3   0.5  17
+   7 CCQU     CLI Quilichao,Colombia            3.080  -76.500   990  24.0   0.5  18
+   8 CCSR     CLI SantaRosa,Colombia            4.050  -73.480   311  26.0   1.1  15
+   9 CHER     CLI Chernigov, Ukraine           51.480   31.280   -99   7.4  12.1  10
+  10 CISC     CLI EstExpAgricola Saavedra     -17.233  -63.167   320  25.4   4.2  18
+  11 CNPA     CLI Sto Antonio de Goias        -16.466   49.283   823  23.8   2.4  18
+  12 CNPE     CLI PERGAMINO                   -33.929  -60.549    70 -99.0 -99.0 -99
+  13 DTCM     CLI Chiangmai                    19.000   99.000     0  25.6   3.9  17
+  14 EBAF     CLI CNPAF,GOIANIA,BRAZIL         16.470   49.280   823  23.2   1.7  19
+  15 FIBR     CLI Brasov,Romania               45.700   25.530   534   9.3   9.4  11
+  16 GAAL     CLI Alma,Georgia,USA             31.560  -82.510    60  19.2   8.8  14
+  17 GAAT     CLI GAAT                         33.633  -84.500   308  16.6  10.0 -99
+  18 GAEX     CLI Experiment_Georgia           33.240  -84.250   299  16.5   9.5  15
+  19 GAGR     CLI GRIFFIN,GEORGIA,USA          33.262  -84.284   299  16.6   9.7  16
+  20 GAPL     CLI Plains,Georgia,USA           32.047  -84.371   152  17.9   9.2  15
+  21 GATI     CLI Tifton,Georgia,USA           31.483  -83.533     0  19.1   8.6  16
+  22 GAWI     CLI Williamson,Georgia,USA       33.176  -84.406   253  16.2   9.3  15
+  23 HORS     CLI                              33.300  -84.300   300  14.8   6.5  16
+  24 IBEM     CLI OahuSugar(EwaMill)           21.343  158.037    12  24.0   2.0 -99
+  25 IBF1     CLI OahuSugarCo.(Field155)       21.409  158.062    23  22.5   1.9 -99
+  26 IBF2     CLI OahuSugarCo.(Field260)       21.453  158.047   186  22.6   2.1 -99
+  27 IBH4     CLI LihuePlantationCo.(FieldH    22.079  159.399   145  22.2   1.9 -99
+  28 IBH6     CLI HC&S(Pump9/Field603)         20.878  156.408    62  22.9   2.1 -99
+  29 IBH9     CLI HC&S(Field906/Village7)      20.825  156.500    49  24.0   2.1 -99
+  30 IBL2     CLI LihuePlantation(FieldL-24    21.967  159.350    38  23.0   2.1 -99
+  31 IBOP     CLI WaialuaSugarCo.(Opaeula17    21.580  158.062   210  22.4   1.8 -99
+  32 IBPA     CLI Hamakua(PaauhauOffice)       20.087  155.440   122  22.7   1.5 -99
+  33 IBPI     CLI Hamakua(PaauhauAirstrip)     20.045  155.450   632  17.8   1.6 -99
+  34 IBPM     CLI Hamakua(PMAPlant)            20.055  155.449   391  19.9   1.3 -99
+  35 IBPU     CLI HC&S(Puunene/Field713)       20.875  156.457    18  23.0   2.1 -99
+  36 IBSI     CLI Sitiung,Indonesia            -2.000  102.000     0  26.8   0.6  14
+  37 IBWM     CLI OahuSugarCo.(Waimanalo)      21.332  158.093    11  24.1   2.4 -99
+  38 IRPI     CLI LosBanos,Philippines         14.180  121.250     0  26.0   1.3  16
+  39 ITHY     CLI Hyderabad,India              17.530   78.270     0  25.8   5.4  18
+  40 LUML     CLI Lumle, Nepal                 28.300   83.800   300 -99.0 -99.0 -99
+  41 MMKI     CLI Kita, Mali                   33.300  -84.300   300  28.8   4.5   8
+  42 MOCO     CLI moco                          0.000    0.000     0  13.3  11.9  15
+  43 MWCZ     CLI Calculated_from_daily_dat   -13.980   33.630     0  20.0   3.8  19
+  44 NITL     CLI TILLABERY, NIGER             14.200    1.450   209   0.0   0.0  00
+  45 RORO     CLI Rothamsted,England           52.500   -0.500   100   9.9   6.1   9
+  46 SARR     CLI SARR                         33.299  -84.300   300  16.4   9.7  15
+  47 UFGA     CLI Gainesville,Florida,USA      29.630  -82.370    10  20.9   7.3  16
+  48 WABI     CLI De_Bilt,The_Netherlands      52.100    5.200    37   9.7   6.6   9
