@@ -1,0 +1,847 @@
+*SOILS: Land types
+
+*LTBb012401  LDESOL      -99      266 LANDTYPE LTBb124_1 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb124_1 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.34  83.6  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.132 0.227 0.413     1   -99  1.35  1.23   -99   -99   -99   -99   -99   -99   -99   -99
+    48     B 0.153  0.24 0.385 0.497   -99  1.58  1.16   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb012403  LDESOL      -99      379 LANDTYPE LTBb124_3 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb124_3 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.33  84.5  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    24     A  0.13 0.219 0.413     1   -99  1.35  1.28   -99   -99   -99   -99   -99   -99   -99   -99
+    62     B  0.19 0.264 0.388 0.423   -99  1.57  1.15   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb001901  LDESOL      -99      398 LANDTYPE LTBb19_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb19_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.28  75.4  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    23     A 0.131 0.216 0.413     1   -99  1.35  0.77   -99   -99   -99   -99   -99   -99   -99   -99
+    62     B 0.207 0.274 0.385 0.427   -99  1.58  0.69   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb001903  LDESOL      -99      388 LANDTYPE LTBb19_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb19_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.27  79.6  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    23     A 0.129 0.215 0.414     1   -99  1.35  0.77   -99   -99   -99   -99   -99   -99   -99   -99
+    62     B 0.205 0.273 0.386 0.427   -99  1.58  0.69   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb001904  LDESOL      -99      411 LANDTYPE LTBb19_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb19_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.25  79.6  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    24     A 0.133 0.217 0.419     1   -99  1.33  0.81   -99   -99   -99   -99   -99   -99   -99   -99
+    65     B 0.204 0.272 0.395 0.411   -99  1.56  0.72   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb001905  LDESOL      -99      494 LANDTYPE LTBb19_5  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb19_5  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.19  83.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    25     A 0.186 0.254  0.45     1   -99  1.23  0.65   -99   -99   -99   -99   -99   -99   -99   -99
+    74     B 0.186  0.26 0.464 0.372   -99  1.39  0.54   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb002001  LDESOL      -99      398 LANDTYPE LTBb20_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb20_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.28  75.4  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    23     A 0.131 0.216 0.413     1   -99  1.35  0.74   -99   -99   -99   -99   -99   -99   -99   -99
+    62     B 0.207 0.274 0.385 0.427   -99  1.58  0.66   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb002003  LDESOL      -99      388 LANDTYPE LTBb20_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb20_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.27  79.6  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    23     A 0.129 0.215 0.414     1   -99  1.35  0.74   -99   -99   -99   -99   -99   -99   -99   -99
+    62     B 0.205 0.273 0.386 0.427   -99  1.58  0.66   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb002004  LDESOL      -99      411 LANDTYPE LTBb20_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb20_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.25  79.6  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    24     A 0.133 0.217 0.419     1   -99  1.33  0.75   -99   -99   -99   -99   -99   -99   -99   -99
+    65     B 0.204 0.272 0.395 0.411   -99  1.56  0.67   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb002005  LDESOL      -99      494 LANDTYPE LTBb20_5  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb20_5  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.19  83.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    25     A 0.186 0.254  0.45     1   -99  1.23  0.61   -99   -99   -99   -99   -99   -99   -99   -99
+    74     B 0.186  0.26 0.464 0.372   -99  1.39  0.51   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb002301  LDESOL      -99      424 LANDTYPE LTBb23_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb23_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0   0.3  73.9  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    27     A 0.153 0.233  0.41     1   -99  1.35  0.63   -99   -99   -99   -99   -99   -99   -99   -99
+    70     B  0.19 0.263 0.386 0.379   -99  1.58  0.54   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb002303  LDESOL      -99      493 LANDTYPE LTBb23_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb23_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.28  76.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    27     A 0.163 0.239 0.403     1   -99  1.35  0.65   -99   -99   -99   -99   -99   -99   -99   -99
+    76     B 0.227 0.289 0.393 0.357   -99  1.56  0.54   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb002304  LDESOL      -99      396 LANDTYPE LTBb23_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb23_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0   0.2  81.3  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    25     A 0.159 0.235 0.417     1   -99  1.32  0.71   -99   -99   -99   -99   -99   -99   -99   -99
+    65     B 0.215  0.28 0.411 0.407   -99  1.52  0.63   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb002501  LDESOL      -99      434 LANDTYPE LTBb25_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb25_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.33  75.9  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    25     A 0.134 0.221 0.411     1   -99  1.35  0.77   -99   -99   -99   -99   -99   -99   -99   -99
+    68     B 0.199  0.27 0.386 0.395   -99  1.58  0.67   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb002503  LDESOL      -99      389 LANDTYPE LTBb25_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb25_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.31  81.7  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    24     A 0.143 0.227 0.408     1   -99  1.35  0.78   -99   -99   -99   -99   -99   -99   -99   -99
+    63     B 0.209 0.277 0.388 0.419   -99  1.57   0.7   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb002504  LDESOL      -99      164 LANDTYPE LTBb25_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb25_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.21  86.4  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.193 0.259  0.39     1   -99  1.35  0.76   -99   -99   -99   -99   -99   -99   -99   -99
+    36     B 0.268 0.318 0.398 0.571   -99  1.55  0.73   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBb002505  LDESOL      -99      392 LANDTYPE LTBb25_5  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBb25_5  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.42  83.4  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    25     A 0.187 0.255 0.417     1   -99  1.31  0.81   -99   -99   -99   -99   -99   -99   -99   -99
+    64     B 0.217 0.282 0.416 0.411   -99  1.51  0.72   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBc005301  LDESOL      -99      438 LANDTYPE LTBc53_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBc53_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.45  77.6  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    25     A 0.137  0.22 0.413     1   -99  1.35  1.08   -99   -99   -99   -99   -99   -99   -99   -99
+    69     B 0.201  0.27 0.385 0.391   -99  1.58  0.93   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBc005303  LDESOL      -99      442 LANDTYPE LTBc53_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBc53_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.44  81.4  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    25     A 0.146 0.226 0.415     1   -99  1.34  1.16   -99   -99   -99   -99   -99   -99   -99   -99
+    69     B 0.207 0.275 0.388 0.391   -99  1.57     1   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBc005304  LDESOL      -99      420 LANDTYPE LTBc53_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBc53_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.44  81.7  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    24     A 0.163 0.238 0.418     1   -99  1.34  1.26   -99   -99   -99   -99   -99   -99   -99   -99
+    66     B 0.212 0.278 0.393 0.407   -99  1.56  1.11   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBc005305  LDESOL      -99      335 LANDTYPE LTBc53_5  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBc53_5  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.34  84.6  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A 0.247 0.296 0.431     1   -99  1.29  1.46   -99   -99   -99   -99   -99   -99   -99   -99
+    54     B 0.247 0.302  0.42 0.472   -99  1.49  1.35   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBd005301  LDESOL      -99       75 LANDTYPE LTBd53_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBd53_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.15    84  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.169 0.242 0.413     1   -99  1.35  0.68   -99   -99   -99   -99   -99   -99   -99   -99
+    28     B 0.169 0.248 0.385 0.619   -99  1.58  0.67   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBd005303  LDESOL      -99       75 LANDTYPE LTBd53_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBd53_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.17  88.4  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.183 0.252 0.403     1   -99  1.35  0.79   -99   -99   -99   -99   -99   -99   -99   -99
+    28     B 0.207 0.274  0.39 0.619   -99  1.57  0.77   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBd005304  LDESOL      -99      275 LANDTYPE LTBd53_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBd53_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.27  84.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.148 0.227 0.414     1   -99  1.32  0.82   -99   -99   -99   -99   -99   -99   -99   -99
+    50     B 0.217 0.283 0.405 0.487   -99  1.53  0.77   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTBd005305  LDESOL      -99      645 LANDTYPE LTBd53_5  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTBd53_5  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.56  82.2  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    33     A 0.192 0.258  0.43     1   -99  1.29  1.14   -99   -99   -99   -99   -99   -99   -99   -99
+    97     B 0.196 0.267 0.425 0.273   -99  1.48  0.76   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000101  LDESOL      -99      652 LANDTYPE LTCa1_1   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa1_1   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13    13  0.33  78.1  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    33     A 0.068 0.165 0.424     1   -99  1.38  0.43   -99   -99   -99   -99   -99   -99   -99   -99
+    98     B   0.1 0.198 0.433  0.27   -99  1.58  0.28   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000103  LDESOL      -99      621 LANDTYPE LTCa1_3   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa1_3   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.32  78.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    32     A 0.071 0.168 0.424     1   -99  1.31  0.43   -99   -99   -99   -99   -99   -99   -99   -99
+    94     B 0.114 0.208 0.429 0.284   -99  1.52   0.3   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000104  LDESOL      -99      381 LANDTYPE LTCa1_4   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa1_4   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.24  81.7  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    23     A 0.107 0.199 0.425     1   -99  1.32  0.56   -99   -99   -99   -99   -99   -99   -99   -99
+    62     B 0.185  0.26 0.411 0.427   -99  1.53   0.5   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000105  LDESOL      -99      379 LANDTYPE LTCa1_5   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa1_5   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.15  86.6  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.144 0.225  0.44     1   -99  1.27  0.71   -99   -99   -99   -99   -99   -99   -99   -99
+    60     B 0.182 0.257  0.44  0.44   -99  1.44  0.64   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa001001  LDESOL      -99      287 LANDTYPE LTCa10_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa10_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.25  84.6  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.188 0.255 0.392     1   -99  1.35  0.71   -99   -99   -99   -99   -99   -99   -99   -99
+    50     B 0.265 0.315 0.399 0.487   -99  1.55  0.66   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa001003  LDESOL      -99      300 LANDTYPE LTCa10_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa10_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.25  84.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.184 0.252 0.395     1   -99  1.34  0.73   -99   -99   -99   -99   -99   -99   -99   -99
+    52     B  0.26 0.312   0.4 0.477   -99  1.54  0.68   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa001004  LDESOL      -99      344 LANDTYPE LTCa10_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa10_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.25    86  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    25     A 0.211 0.271 0.391     1   -99  1.34  0.79   -99   -99   -99   -99   -99   -99   -99   -99
+    59     B 0.271  0.32 0.406 0.432   -99  1.53  0.72   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa001005  LDESOL      -99      406 LANDTYPE LTCa10_5  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa10_5  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.18  86.4  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    23     A 0.199 0.263  0.42     1   -99  1.28  0.93   -99   -99   -99   -99   -99   -99   -99   -99
+    64     B 0.223 0.286 0.439 0.419   -99  1.45  0.83   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa011101  LDESOL      -99       50 LANDTYPE LTCa111_1 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa111_1 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0   0.3    84  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.138 0.242 0.413     1   -99  1.35  0.81   -99   -99   -99   -99   -99   -99   -99   -99
+    25     B 0.092 0.202 0.385 0.638   -99  1.58  0.79   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa011103  LDESOL      -99      200 LANDTYPE LTCa111_3 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa111_3 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.34  84.4  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.157 0.245 0.403     1   -99  1.35  0.92   -99   -99   -99   -99   -99   -99   -99   -99
+    42     B 0.179 0.259  0.39 0.527   -99  1.57  0.87   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa011104  LDESOL      -99      187 LANDTYPE LTCa111_4 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa111_4 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.27  85.5  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A 0.207 0.269 0.386     1   -99  1.35  0.97   -99   -99   -99   -99   -99   -99   -99   -99
+    39     B  0.27 0.319 0.399 0.549   -99  1.55  0.93   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa011105  LDESOL      -99      400 LANDTYPE LTCa111_5 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa111_5 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.45  82.6  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    25     A 0.184 0.253 0.418     1   -99  1.31  1.07   -99   -99   -99   -99   -99   -99   -99   -99
+    65     B 0.215 0.281 0.414 0.407   -99  1.51  0.95   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000401  LDESOL      -99      522 LANDTYPE LTCa4_1   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa4_1   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.25    81  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    29     A 0.085 0.183 0.434     1   -99   1.3  0.52   -99   -99   -99   -99   -99   -99   -99   -99
+    81     B 0.151 0.238 0.417 0.333   -99   1.5  0.41   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000403  LDESOL      -99      454 LANDTYPE LTCa4_3   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa4_3   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.25  84.7  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    27     A   0.1 0.193  0.43     1   -99   1.3  0.52   -99   -99   -99   -99   -99   -99   -99   -99
+    72     B 0.168 0.249 0.414 0.372   -99  1.51  0.45   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000404  LDESOL      -99      233 LANDTYPE LTCa4_4   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa4_4   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.25  86.9  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A 0.154 0.231 0.416     1   -99  1.32  0.59   -99   -99   -99   -99   -99   -99   -99   -99
+    44     B 0.228  0.29 0.409 0.522   -99  1.52  0.56   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000405  LDESOL      -99      240 LANDTYPE LTCa4_5   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa4_5   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.26  86.2  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.182 0.251  0.41     1   -99   1.3   0.7   -99   -99   -99   -99   -99   -99   -99   -99
+    44     B 0.244 0.301 0.425 0.527   -99  1.48  0.66   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000601  LDESOL      -99      390 LANDTYPE LTCa6_1   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa6_1   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.28  82.2  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    24     A 0.157 0.234 0.406     1   -99  1.34  0.65   -99   -99   -99   -99   -99   -99   -99   -99
+    63     B 0.223 0.287 0.396 0.419   -99  1.55  0.58   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000603  LDESOL      -99      317 LANDTYPE LTCa6_3   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa6_3   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.23  83.2  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.137 0.219 0.413     1   -99  1.31  0.65   -99   -99   -99   -99   -99   -99   -99   -99
+    54     B 0.195 0.266 0.399 0.468   -99  1.52   0.6   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000604  LDESOL      -99      319 LANDTYPE LTCa6_4   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa6_4   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.23  82.5  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.144 0.224 0.428     1   -99   1.3  0.68   -99   -99   -99   -99   -99   -99   -99   -99
+    54     B 0.194 0.267 0.417 0.468   -99   1.5  0.63   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000605  LDESOL      -99      456 LANDTYPE LTCa6_5   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa6_5   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.29  85.2  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    26     A 0.181  0.25 0.443     1   -99  1.26  0.92   -99   -99   -99   -99   -99   -99   -99   -99
+    71     B   0.2  0.27 0.444 0.379   -99  1.44  0.78   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000701  LDESOL      -99      252 LANDTYPE LTCa7_1   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa7_1   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0   0.2  86.3  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A 0.152 0.231 0.413     1   -99  1.33  0.65   -99   -99   -99   -99   -99   -99   -99   -99
+    46     B  0.22 0.284 0.405 0.512   -99  1.53  0.61   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000703  LDESOL      -99      274 LANDTYPE LTCa7_3   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa7_3   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.21    86  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A  0.16 0.237 0.414     1   -99  1.32  0.66   -99   -99   -99   -99   -99   -99   -99   -99
+    48     B 0.225 0.288 0.407 0.502   -99  1.53  0.62   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000704  LDESOL      -99      289 LANDTYPE LTCa7_4   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa7_4   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.19  86.4  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A 0.173 0.245 0.415     1   -99  1.32  0.66   -99   -99   -99   -99   -99   -99   -99   -99
+    50     B 0.242 0.299 0.412 0.492   -99  1.52  0.62   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTCa000705  LDESOL      -99      366 LANDTYPE LTCa7_5   
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTCa7_5   
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.19  85.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.289 0.326 0.433     1   -99  1.26     1   -99   -99   -99   -99   -99   -99   -99   -99
+    58     B  0.32 0.353 0.444 0.449   -99  1.43  0.91   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTDb020201  LDESOL      -99      218 LANDTYPE LTDb202_1 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTDb202_1 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.28  86.6  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A  0.18  0.25 0.396     1   -99  1.35  0.78   -99   -99   -99   -99   -99   -99   -99   -99
+    44     B 0.258 0.311 0.394 0.517   -99  1.56  0.73   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTDb020203  LDESOL      -99       98 LANDTYPE LTDb202_3 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTDb202_3 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.22  92.2  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.189 0.256 0.396     1   -99  1.35  0.85   -99   -99   -99   -99   -99   -99   -99   -99
+    30     B 0.248 0.304 0.394 0.607   -99  1.56  0.82   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTDb020204  LDESOL      -99      137 LANDTYPE LTDb202_4 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTDb202_4 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.23  89.7  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.191 0.257  0.39     1   -99  1.35  0.72   -99   -99   -99   -99   -99   -99   -99   -99
+    34     B 0.274 0.322 0.398 0.583   -99  1.55   0.7   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTDb020205  LDESOL      -99      259 LANDTYPE LTDb202_5 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTDb202_5 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.32  84.5  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    23     A 0.177 0.248 0.409     1   -99  1.32  0.82   -99   -99   -99   -99   -99   -99   -99   -99
+    49     B 0.229  0.29 0.407 0.487   -99  1.53  0.77   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTDc001003  LDESOL      -99       91 LANDTYPE LTDc10_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTDc10_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.28  84.9  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.216 0.277  0.39     1   -99  1.34  0.64   -99   -99   -99   -99   -99   -99   -99   -99
+    29     B 0.268 0.318 0.405 0.613   -99  1.54  0.62   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTDc001501  LDESOL      -99      184 LANDTYPE LTDc15_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTDc15_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.29  83.5  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.165 0.239 0.411     1   -99  1.33  0.57   -99   -99   -99   -99   -99   -99   -99   -99
+    39     B 0.246 0.302 0.399 0.554   -99  1.55  0.54   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTDc001503  LDESOL      -99      180 LANDTYPE LTDc15_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTDc15_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.28  86.7  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.169 0.242 0.413     1   -99  1.33  0.58   -99   -99   -99   -99   -99   -99   -99   -99
+    38     B 0.247 0.303 0.398  0.56   -99  1.55  0.56   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTDc001504  LDESOL      -99      296 LANDTYPE LTDc15_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTDc15_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.23  85.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    23     A 0.232 0.286 0.396     1   -99  1.32  0.77   -99   -99   -99   -99   -99   -99   -99   -99
+    52     B  0.29 0.333 0.419 0.472   -99   1.5  0.72   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTDc001505  LDESOL      -99      369 LANDTYPE LTDc15_5  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTDc15_5  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.19  86.5  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.202 0.265 0.431     1   -99  1.26  1.02   -99   -99   -99   -99   -99   -99   -99   -99
+    59     B 0.221 0.284 0.449 0.445   -99  1.42  0.93   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa001801  LDESOL      -99      265 LANDTYPE LTEa18_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa18_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.21  85.2  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.267 0.319 0.412     1   -99   1.3  1.03   -99   -99   -99   -99   -99   -99   -99   -99
+    47     B 0.289 0.335  0.43 0.512   -99  1.47  0.97   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa001803  LDESOL      -99      415 LANDTYPE LTEa18_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa18_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.16  85.7  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.308 0.339 0.444     1   -99  1.24  1.38   -99   -99   -99   -99   -99   -99   -99   -99
+    64     B 0.317 0.352 0.458 0.423   -99  1.39  1.22   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa001804  LDESOL      -99      460 LANDTYPE LTEa18_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa18_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.14    83  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    23     A 0.293 0.329 0.452     1   -99  1.23  1.37   -99   -99   -99   -99   -99   -99   -99   -99
+    69     B 0.293 0.335 0.464 0.399   -99  1.38  1.18   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa001805  LDESOL      -99      517 LANDTYPE LTEa18_5  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa18_5  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0   0.1  83.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    26     A 0.192 0.258 0.456     1   -99  1.22  1.11   -99   -99   -99   -99   -99   -99   -99   -99
+    78     B 0.192 0.264 0.468 0.353   -99  1.37  0.91   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa019701  LDESOL      -99      277 LANDTYPE LTEa197_1 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa197_1 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.43  86.2  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A 0.163 0.238 0.413     1   -99  1.35  1.87   -99   -99   -99   -99   -99   -99   -99   -99
+    49     B 0.175 0.252 0.385 0.497   -99  1.58  1.75   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa019703  LDESOL      -99      297 LANDTYPE LTEa197_3 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa197_3 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.48  89.5  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A 0.164 0.239 0.413     1   -99  1.35  2.33   -99   -99   -99   -99   -99   -99   -99   -99
+    50     B 0.174 0.251 0.385 0.492   -99  1.58  2.18   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa002701  LDESOL      -99      341 LANDTYPE LTEa27_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa27_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.18  82.5  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A 0.314 0.344 0.431     1   -99  1.26  0.96   -99   -99   -99   -99   -99   -99   -99   -99
+    55     B 0.342 0.369 0.449 0.468   -99  1.42  0.89   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa002703  LDESOL      -99      357 LANDTYPE LTEa27_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa27_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.21  82.5  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    23     A 0.294 0.329 0.415     1   -99  1.28  0.85   -99   -99   -99   -99   -99   -99   -99   -99
+    58     B 0.331 0.362 0.437 0.445   -99  1.45  0.78   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa002704  LDESOL      -99      449 LANDTYPE LTEa27_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa27_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.22  82.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    26     A 0.262 0.307 0.415     1   -99  1.28  0.91   -99   -99   -99   -99   -99   -99   -99   -99
+    71     B  0.29 0.333 0.437 0.379   -99  1.45  0.78   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa002705  LDESOL      -99      533 LANDTYPE LTEa27_5  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa27_5  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.15    84  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    27     A  0.19 0.257 0.439     1   -99  1.25  1.05   -99   -99   -99   -99   -99   -99   -99   -99
+    80     B  0.19 0.263 0.455 0.343   -99   1.4  0.84   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa002801  LDESOL      -99      197 LANDTYPE LTEa28_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa28_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.19  84.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A 0.222 0.279 0.423     1   -99  1.31  0.77   -99   -99   -99   -99   -99   -99   -99   -99
+    41     B 0.239 0.297  0.41 0.538   -99  1.52  0.73   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa002803  LDESOL      -99      231 LANDTYPE LTEa28_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa28_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.19  84.9  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A 0.245 0.295 0.427     1   -99   1.3  0.85   -99   -99   -99   -99   -99   -99   -99   -99
+    44     B 0.261 0.313  0.42 0.522   -99  1.49  0.81   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa002804  LDESOL      -99      312 LANDTYPE LTEa28_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa28_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.29  86.1  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A 0.227 0.283 0.433     1   -99  1.27  1.02   -99   -99   -99   -99   -99   -99   -99   -99
+    52     B 0.243   0.3 0.448 0.482   -99  1.44  0.94   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa002805  LDESOL      -99      413 LANDTYPE LTEa28_5  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa28_5  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.21  86.5  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.235 0.288 0.441     1   -99  1.25  1.08   -99   -99   -99   -99   -99   -99   -99   -99
+    63     B 0.235 0.294 0.457 0.427   -99  1.41  0.96   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa002901  LDESOL      -99      265 LANDTYPE LTEa29_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa29_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.21  85.2  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.267 0.319 0.412     1   -99   1.3  0.97   -99   -99   -99   -99   -99   -99   -99   -99
+    47     B 0.289 0.335  0.43 0.512   -99  1.47  0.91   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa002903  LDESOL      -99      415 LANDTYPE LTEa29_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa29_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.16  85.7  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.308 0.339 0.444     1   -99  1.24   1.3   -99   -99   -99   -99   -99   -99   -99   -99
+    64     B 0.317 0.352 0.458 0.423   -99  1.39  1.16   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa002904  LDESOL      -99      460 LANDTYPE LTEa29_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa29_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.14    86  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    23     A 0.293 0.329 0.452     1   -99  1.23  1.37   -99   -99   -99   -99   -99   -99   -99   -99
+    69     B 0.293 0.335 0.464 0.399   -99  1.38  1.19   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa002905  LDESOL      -99      517 LANDTYPE LTEa29_5  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa29_5  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0   0.1  83.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    26     A 0.192 0.258 0.456     1   -99  1.22  1.06   -99   -99   -99   -99   -99   -99   -99   -99
+    78     B 0.192 0.264 0.468 0.353   -99  1.37  0.86   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa003101  LDESOL      -99      184 LANDTYPE LTEa31_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa31_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.27  84.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A 0.197 0.268 0.411     1   -99  1.33  0.92   -99   -99   -99   -99   -99   -99   -99   -99
+    39     B  0.22 0.286 0.405 0.549   -99  1.53  0.88   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa003103  LDESOL      -99      268 LANDTYPE LTEa31_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa31_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.25  85.2  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.219 0.279 0.419     1   -99   1.3  1.02   -99   -99   -99   -99   -99   -99   -99   -99
+    49     B 0.258 0.311 0.419 0.492   -99   1.5  0.95   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa003104  LDESOL      -99      265 LANDTYPE LTEa31_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa31_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0   0.2    86  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.194 0.259 0.434     1   -99  1.28  1.03   -99   -99   -99   -99   -99   -99   -99   -99
+    48     B 0.223 0.286 0.433 0.497   -99  1.46  0.97   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa003105  LDESOL      -99      352 LANDTYPE LTEa31_5  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa31_5  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.18  84.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    24     A 0.161 0.237 0.445     1   -99  1.25  0.89   -99   -99   -99   -99   -99   -99   -99   -99
+    59     B 0.177 0.253 0.447 0.436   -99  1.42   0.8   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa007701  LDESOL      -99      235 LANDTYPE LTEa77_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa77_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.22  84.9  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.221 0.279 0.418     1   -99  1.32  1.02   -99   -99   -99   -99   -99   -99   -99   -99
+    45     B 0.243   0.3 0.408 0.512   -99  1.52  0.97   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa007703  LDESOL      -99      311 LANDTYPE LTEa77_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa77_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.21  88.9  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    24     A 0.234 0.288 0.424     1   -99   1.3  1.11   -99   -99   -99   -99   -99   -99   -99   -99
+    55     B 0.251 0.305 0.417 0.454   -99   1.5  1.02   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa007704  LDESOL      -99      535 LANDTYPE LTEa77_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa77_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.17  86.2  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    28     A 0.231 0.285 0.438     1   -99  1.25   1.4   -99   -99   -99   -99   -99   -99   -99   -99
+    81     B 0.236 0.295 0.451 0.336   -99  1.41  1.11   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTEa007705  LDESOL      -99      574 LANDTYPE LTEa77_5  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTEa77_5  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.17  85.6  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    29     A 0.209  0.27 0.442     1   -99  1.25  1.26   -99   -99   -99   -99   -99   -99   -99   -99
+    86     B 0.219 0.283 0.452 0.317   -99  1.41  0.96   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTFa062901  LDESOL      -99      128 LANDTYPE LTFa629_1 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTFa629_1 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.26  86.3  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.151 0.229 0.421     1   -99  1.33  0.57   -99   -99   -99   -99   -99   -99   -99   -99
+    33     B 0.153 0.239 0.395 0.589   -99  1.56  0.55   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTFa062903  LDESOL      -99      135 LANDTYPE LTFa629_3 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTFa629_3 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0   0.2  90.2  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A 0.159 0.235 0.414     1   -99  1.34  0.63   -99   -99   -99   -99   -99   -99   -99   -99
+    34     B 0.174 0.252 0.388 0.577   -99  1.57  0.61   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTFa063001  LDESOL      -99      238 LANDTYPE LTFa630_1 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTFa630_1 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.42  84.9  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    21     A 0.124  0.21 0.434     1   -99   1.3  1.07   -99   -99   -99   -99   -99   -99   -99   -99
+    45     B 0.125  0.22 0.411 0.517   -99  1.52  1.01   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTFa063003  LDESOL      -99      261 LANDTYPE LTFa630_3 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTFa630_3 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.38  86.1  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    22     A 0.129 0.214  0.43     1   -99  1.31  1.16   -99   -99   -99   -99   -99   -99   -99   -99
+    48     B 0.136 0.227 0.406 0.497   -99  1.53  1.09   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTFa063004  LDESOL      -99      314 LANDTYPE LTFa630_4 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTFa630_4 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.39  83.6  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    23     A 0.126 0.211 0.427     1   -99  1.31  1.01   -99   -99   -99   -99   -99   -99   -99   -99
+    55     B 0.164 0.246 0.405 0.458   -99  1.53  0.93   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTFa063005  LDESOL      -99      422 LANDTYPE LTFa630_5 
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTFa630_5 
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.47  88.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    26     A 0.147 0.227 0.435     1   -99   1.3  1.27   -99   -99   -99   -99   -99   -99   -99   -99
+    68     B 0.183 0.258 0.411 0.391   -99  1.51  1.11   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTIb008901  LDESOL      -99       50 LANDTYPE LTIb89_1  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTIb89_1  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.24  91.8  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.221 0.278 0.393     1   -99  1.35  1.34   -99   -99   -99   -99   -99   -99   -99   -99
+    25     B 0.221 0.284 0.396 0.638   -99  1.56  1.31   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTIb008903  LDESOL      -99       50 LANDTYPE LTIb89_3  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTIb89_3  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.22  91.6  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.212 0.272 0.397     1   -99  1.35  1.69   -99   -99   -99   -99   -99   -99   -99   -99
+    25     B 0.212 0.278 0.394 0.638   -99  1.56  1.65   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTIb008904  LDESOL      -99       93 LANDTYPE LTIb89_4  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTIb89_4  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.31  92.5  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.276 0.317 0.382     1   -99  1.34  2.65   -99   -99   -99   -99   -99   -99   -99   -99
+    29     B 0.276 0.323 0.411 0.613   -99  1.52  2.58   -99   -99   -99   -99   -99   -99   -99   -99
+
+*LTIb008905  LDESOL      -99      154 LANDTYPE LTIb89_5  
+@SITE        COUNTRY          LAT     LONG SCS FAMILY      
+ -99         SAfr              -99    -99  LANDTYPE LTIb89_5  
+@ SCOM  SALB  SLU1  SLDR  SLRO  SLNF  SLPF  SMHB  SMPX  SMKE
+   -99  0.13   6.0  0.29  92.5  1.00  1.00   -99   -99   -99
+@  SLB  SLMH  SLLL  SDUL  SSAT  SRGF  SSKS  SBDM  SLOC  SLCL  SLSI  SLCF  SLNI  SLHW  SLHB  SCEC  SADC
+    20     A 0.295  0.33 0.396     1   -99  1.31  2.04   -99   -99   -99   -99   -99   -99   -99   -99
+    35     B 0.295 0.336 0.424 0.577   -99  1.49  1.97   -99   -99   -99   -99   -99   -99   -99   -99

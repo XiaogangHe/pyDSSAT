@@ -1,0 +1,73 @@
+*File used for pyDSSAT package
+
+*SUMMARY
+@CDE	LABEL			DESCRIPTION............................................  SYNONYMS
+SDAT	Simulation date		Simulation start date (YrDoy)
+PDAT	Planting date		Planting date (YrDoy)
+EDAT	Emergence date		Emergence date (YrDoy)
+ADAT	Anthesis date		Anthesis date (YrDoy)
+MDAT	Maturity date		Physiological maturity date (YrDoy)
+HDAT	Harvest date		Harvest date (YRDOY)
+DWAP	Sowing wt kg/ha		Planting material weight (kg [dm]/ha)
+CWAM	Tops wt kg/ha		Tops weight at maturity (kg [dm]/ha)
+HWAM	Mat Yield kg/ha		Yield at harvest maturity (kg [dm]/ha)
+HWAH	Harvested yield		Harvested yield (kg [dm]/ha)
+BWAH	Byproduct kg/ha		By-product removed during harvest (kg [dm]/ha)
+PWAM	Pod/Ear w kg/ha		Pod/Ear/Panicle weight at maturity (kg [dm]/ha)
+HWUM	Weight g/unit		Unit wt at maturity (g [dm]/unit)
+H#AM	Number #/m2		Number at maturity (no/m2)
+H#UM	Number #/unit		Number at maturity (no/unit)
+HIAM	Harvest index		Harvest index at maturity
+LAIX	LAI maximum		Leaf area index, maximum
+IR#M	Irrig apps #		Irrigation applications (no)
+IRCM	Irrig mm		Season irrigation (mm)
+PRCM	Precip mm		Total season precipitation (mm), simulation - harvest
+ETCM	ET total mm		Total season evapotranspiration, Simulation-harvest (mm)
+EPCM	EP total mm		Total season transpiration (mm)
+ESCM	ES total mm		Total season soil evaporation (mm)
+ROCM	Runoff mm		Season surface runoff (mm)
+DRCM	Drainage mm		Season water drainage (mm)
+SWXM	Extr water mm		Extractable water at maturity (mm)
+NI#M	N application #		N applications (no)
+NICM	Tot N app kg/ha		Inorganic N applied (kg [N]/ha)
+NFXM	N fixed kg/h		N fixed during season (kg/ha)
+NUCM	N uptake kg/ha		N uptake during season (kg [N]/ha)
+NLCM	N leached kg/ha		N leached during season (kg [N]/ha)
+NIAM	Soil N kg/ha		Inorganic N at maturity (kg [N]/ha)
+CNAM	Tops N kg/ha		Tops N at maturity (kg/ha)
+GNAM	Grain N kg/ha		Grain N at maturity (kg/ha)
+PI#M	P application		# Number of P applications (no)
+PICM	P applied kg/ha		Inorganic P applied (kg/ha)
+PUPC	P uptake kg/ha		Seasonal cumulative P uptake (kg[P]/ha)
+SPAM	Soil P kg/ha		Soil P at maturity (kg/ha)
+KI#M	K application #		Number of K applications (no)
+KICM	K applied kg/ha		Inorganic K applied (kg/ha)
+KUPC	K uptake kg/ha		Cumulative K uptake by plants (kg/ha)
+SKAM	Soil K kg/ha		Soil K at maturity (kg/ha)
+RECM	Residue kg/ha		Residue applied (kg/ha)
+ONTAM	Tot Org N kg/ha		Total Organic N at maturity, soil and surface (kg/ha)
+ONAM	Organic N kg/ha		Organic soil N at maturity (kg/ha)
+OPTAM	Tot Org P kg/ha		Total Organic P at maturity, soil and surface (kg/ha)
+OPAM	Organic P kg/ha		Organic soil P at maturity (kg/ha)
+OCTAM	Tot Org C kg/ha		Total Organic C at maturity, soil and surface (kg/ha)
+OCAM	Organic C kg/ha		Organic soil C at maturity (kg/ha)
+DMPPM	DM-Rain Prod		Dry matter-rainfall productivity (kg[DM]/ha/mm[rain])
+DMPEM	DM-ET Prod		Dry matter-ET productivity (kg[DM]/ha/mm[ET])
+DMPTM	DM-Transp Prod		Dry matter-transp. productivity (kg[DM]/ha/mm[EP])
+DMPIM	DM-Irrig Prod		Dry matter-irrigation productivity (kg[DM]/ha/mm[irrig])
+YPPM	Yd-Rain Prod		Yield-rainfall productivity (kg[yield]/ha/mm[rain])
+YPEM	Yd-ET Prod		Yield-ET productivity (kg[yield]/ha/mm[ET]) 
+YPTM	Yd-EP Prod		Yield-transpiration productivity (kg[yield]/ha/mm[EP])
+YPIM	Yd-Irrig Prod		Yield-irrigation productivity (kg[yield]/ha/mm[irrig])
+DPNAM	DM-N fert Prod		Dry matter-N fertilizer productivity (kg[DM]/kg[N fert]
+DPNUM	DM-N upt Prod		Dry matter-N uptake productivity (kg[DM]/kg[N uptake]
+YPNAM	No record		No record
+YPNUM	No record		No record
+NDCH	Days to harvest		Number of days from planting to harvest (d)
+TMAXA	Maximum temp C		Avg maximum air temperature (C)
+TMINA	Minimum temp °C		Avg minimum air temperature (°C)
+SRADA	Avg solar rad		Average solar radiation (MJ/m2/d), planting - harvest
+DAYLA	Avg day (hr)		Average daylength (hr/d), planting to harvest
+CO2A	Avg CO2 (ppm)		Average atmospheric CO2 (ppm), planting to harvest
+PRCP	Precip, plant		Total season precipitation (mm), planting to harvest
+ETCP	ET plant seas		Total evapotranspiration (mm), planting to harvest 

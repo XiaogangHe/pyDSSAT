@@ -1,0 +1,32 @@
+D  S  S  A  T  v  4 
+DECISION SUPPORT SYSTEM FOR AGROTECHNOLOGY TRANSFER
+LICENSE & WARRANTY AGGREEMENT
+
+IMPOTANT-READ CAREFULLY: This license and warranty agreement is a legal document between you (either an individual or a single entity) and DSSAT/ICASA that includes certain limited rights to use the proprietary DSSAT software and related materials.  All rights not specifically granted in this Agreement are reserved to DSSAT/ICASA.  By installing or using the SOFTWARE PRODUCT, you agree to be bound by the terms of this agreement.   
+_____________________________________________________________
+SOFTWARE PRODUCT LICENSE
+
+Copyright: The Software, DSSAT v4, and related Materials are owned by the University of Hawaii and is protected by the United States and international treaty provisions.  
+
+Definitions: As used herein, the following words, phrases, or terms in this Agreement shall have the following meanings:
+	
+"Software" means the actual copy of DSSAT and all or any portion of the computer programs delivered inclusive of backups, updates, or subsequently supplied by DSSAT/ICASA.  
+
+"Related Materials" means all of the printed materials, user documentation, training documentation, and source codes provided by under this Agreement.
+
+Grant of License:
+
+1. You may install and use one copy of DSSAT v4, or any prior version for the same operating system, on a single computer.
+
+Description of Other Rights and Limitations:
+
+1. Rental: You may not sell, rent, lease, sublicense, lend, time-share or transfer, in a whole or in part, or provide unlicensed parties access to prior or present version of the DSSAT software and related Materials, any updates, or your rights under this Agreement.
+2. Termination: Without prejudice to any other rights, DSSAT/ICASA may terminate this Agreement if you fail to comply with the terms and conditions of this Agreement.  In such an incident, you must destroy all copies of the SOFTWARE PRODUCT and its component parts.
+
+WARRANTY
+
+The International Consortium for Agricultural Systems Applications disclaim all warranties, whether expressed or implied, as to the DSSAT v4 fitness, performance, or simulation accuracy for any purpose and assume no liability or responsibility to the purchaser or anyone for loss or damage caused by the use of DSSAT v4.  This disclaimer of liability includes, but is not limited to, the loss of data, time, and/or money losses.  The International Consortium for Agricultural Systems Applications is not liable for direct, indirect, and/or incidental damages resulting from defects, errors, or failure to perform by DSSAT v4.
+
+ICASA warrants that the DSSAT v4 software will perform substantially in accordance with the accompanying written documentation for a period of 90 days from date of receipt.  The software is free of defects in materials and workmanship; if damaged or unusable, the disks will be replaced without charge by ICASA for a period of 90 days from the date of receipt.
+
+ICASA DISCLAIMS ALL OTHER WARRANTIES, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANT ABILITY AND FITNESS FOR A PARTICULAR PURPOSE, WITH RESPECT TO THE SOFTWARE AND RELATED MATERIALS.     

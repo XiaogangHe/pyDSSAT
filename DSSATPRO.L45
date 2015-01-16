@@ -1,0 +1,168 @@
+*** *  /DSSAT PROFILE * ***     
+DDB // Users/pitch/DSSAT45/
+DTB // Users/pitch/DSSAT45/
+DTE // Users/pitch/DSSAT45/
+DTO // Users/pitch/DSSAT45/
+DAT // Users/pitch/DSSAT45/
+DPT // Users/pitch/DSSAT45/
+DIM // Users/pitch/DSSAT45/
+DTP // Users/pitch/DSSAT45/
+DPF // Users/pitch/DSSAT45/
+DFO // Users/pitch/DSSAT45/
+DIS // Users/pitch/DSSAT45/
+DDW // Users/pitch/DSSAT45/
+DWG // Users/pitch/DSSAT45/
+DWC // Users/pitch/DSSAT45/
+DDS // Users/pitch/DSSAT45/
+DTS // Users/pitch/DSSAT45/
+DDG // Users/pitch/DSSAT45/
+DCG // Users/pitch/DSSAT45/TOOLS/GENCALC GENCALC2.EXE
+DPM // Users/pitch/DSSAT45/
+DDE // Users/pitch/DSSAT45/
+TOG // Users/pitch/DSSAT45/TOOLS/GBUILD GBUILD.EXE
+
+MAL // Users/pitch/DSSAT45/
+MAR // Users/pitch/DSSAT45/
+MBA // Users/pitch/DSSAT45/DSCSM045.EXE CSCER045
+MBH // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MBM // Users/pitch/DSSAT45/
+MBN // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MBR // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MBS // Users/pitch/DSSAT45/
+MBW // Users/pitch/DSSAT45/
+MCB // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MCH // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MCT // Users/pitch/DSSAT45/
+MCN // Users/pitch/DSSAT45/
+MCO // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MCP // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MCS // Users/pitch/DSSAT45/DSCSM045.EXE CSCRP045
+MCV // Users/pitch/DSSAT45/
+MFA // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MFB // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MGB // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MGW // Users/pitch/DSSAT45/
+MLT // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MML // Users/pitch/DSSAT45/DSCSM045.EXE MLCER045
+MMZ // Users/pitch/DSSAT45/DSCSM045.EXE MZCER045
+MNN // Users/pitch/DSSAT45/
+MNP // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MOA // Users/pitch/DSSAT45/
+MPE // Users/pitch/DSSAT45/
+MPI // Users/pitch/DSSAT45/MDRIV980.EXE MINPT980.EXE PIALO980.EXE I
+MPN // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MPO // Users/pitch/DSSAT45/
+MPP // Users/pitch/DSSAT45/
+MPR // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MPT // Users/pitch/DSSAT45/DSCSM045.EXE PTSUB045
+MRI // Users/pitch/DSSAT45/DSCSM045.EXE RICER045
+MRP // Users/pitch/DSSAT45/
+MSB // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MSC // Users/pitch/DSSAT45/DSCSM045.EXE SCCAN045
+MSG // Users/pitch/DSSAT45/DSCSM045.EXE SGCER045
+MSI // Users/pitch/DSSAT45/
+MSS // Users/pitch/DSSAT45/
+MSU // Users/pitch/DSSAT45/MDRIV980.EXE MINPT980.EXE SUOIL980.EXE I
+MSW // Users/pitch/DSSAT45/DSCSM045.EXE SWCER045
+MTM // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MTN // Users/pitch/DSSAT45/DSCSM045.EXE TNARO045
+MTR // Users/pitch/DSSAT45/DSCSM045.EXE TRARO045
+MVB // Users/pitch/DSSAT45/DSCSM045.EXE CRGRO045
+MVI // Users/pitch/DSSAT45/
+MWH // Users/pitch/DSSAT45/DSCSM045.EXE CSCER045
+MOT // Users/pitch/DSSAT45/
+MU1 // Users/pitch/DSSAT45/
+MU2 // Users/pitch/DSSAT45/
+MIO // Users/pitch/DSSAT45/
+MLO // Users/pitch/DSSAT45/
+
+MGR // Users/pitch/DSSAT45/
+NSH // Users/pitch/DSSAT45/
+ASP // Users/pitch/DSSAT45/
+ASS // Users/pitch/DSSAT45/DSCSM045.EXE
+ASA // Users/pitch/DSSAT45/VARAN2.EXE
+AGR // Users/pitch/DSSAT45/
+AQS // Users/pitch/DSSAT45/DSCSM045.EXE
+AQA // Users/pitch/DSSAT45/SUSTAIN2.EXE
+ASX // Users/pitch/DSSAT45/
+APS // Users/pitch/DSSAT45/DSCSM045.EXE
+APV // Users/pitch/DSSAT45/
+APM // Users/pitch/DSSAT45/
+APA // Users/pitch/DSSAT45/VARAN2.EXE
+APJ // Users/pitch/DSSAT45/
+APF // Users/pitch/DSSAT45/
+APP // Users/pitch/DSSAT45/
+APK // Users/pitch/DSSAT45/DISC9801.EXE
+TOE // Users/pitch/DSSAT45/ULTRAEDT UEDIT32.EXE
+TOS // Users/pitch/DSSAT45/
+TOM // Users/pitch/DSSAT45/
+BGD // Users/pitch/DSSAT45/BACKGROUND
+STD // Users/pitch/DSSAT45/StandardData
+CDD // Users/pitch/DSSAT45/
+WED // Users/pitch/DSSAT45/Weather
+WGD // Users/pitch/DSSAT45/Weather/GEN
+CLD // Users/pitch/DSSAT45/Weather/CLIMATE
+WMD // Users/pitch/DSSAT45/WEATHER/MONTH
+SLD // Users/pitch/DSSAT45/SOIL
+CRD // Users/pitch/DSSAT45/GENOTYPE
+FID // Users/pitch/DSSAT45/BACKGROUND
+ALD // Users/pitch/DSSAT45/ALFALFA
+GCD // Users/pitch/DSSAT45/GCWork
+ARD // Users/pitch/DSSAT45/   
+BAD // Users/pitch/DSSAT45/BARLEY
+BHD // Users/pitch/DSSAT45/BAHIA
+BMD // Users/pitch/DSSAT45/
+BND // Users/pitch/DSSAT45/DRYBEAN
+BRD // Users/pitch/DSSAT45/BRACHIARIA
+BSD // Users/pitch/DSSAT45/SUGARBEET
+BWD // Users/pitch/DSSAT45/
+CBD // Users/pitch/DSSAT45/CABBAGE
+CHD // Users/pitch/DSSAT45/CHICKPEA
+CTD // Users/pitch/DSSAT45/CITRUS
+CND // Users/pitch/DSSAT45/CANOLA
+COD // Users/pitch/DSSAT45/COTTON
+CPD // Users/pitch/DSSAT45/COWPEA
+CSD // Users/pitch/DSSAT45/CASSAVA
+CVD // Users/pitch/DSSAT45/CLOVER
+FAD // Users/pitch/DSSAT45/FALLOW
+FBD // Users/pitch/DSSAT45/FABABEAN
+GBD // Users/pitch/DSSAT45/GREENBEAN
+GWD // Users/pitch/DSSAT45/WEEDS
+LTD // Users/pitch/DSSAT45/LENTIL
+MLD // Users/pitch/DSSAT45/Millet
+MZD // Users/pitch/DSSAT45/Maize
+NND // Users/pitch/DSSAT45/BANANA
+NPD // Users/pitch/DSSAT45/Napier
+OAD // Users/pitch/DSSAT45/OATS
+PED // Users/pitch/DSSAT45/PEA
+PID // Users/pitch/DSSAT45/PINEAPPLE
+PND // Users/pitch/DSSAT45/Peanut
+POD // Users/pitch/DSSAT45/PERENNIALPEANUT
+PPD // Users/pitch/DSSAT45/PIGEONPEA
+PRD // Users/pitch/DSSAT45/PEPPER
+PTD // Users/pitch/DSSAT45/POTATO
+RID // Users/pitch/DSSAT45/RICE
+RPD // Users/pitch/DSSAT45/RHIZOMAPEANUT
+SBD // Users/pitch/DSSAT45/Soybean
+SCD // Users/pitch/DSSAT45/SUGARCANE
+SGD // Users/pitch/DSSAT45/Sorghum
+SSD // Users/pitch/DSSAT45/
+SID // Users/pitch/DSSAT45/
+SUD // Users/pitch/DSSAT45/SUNFLOWER
+SWD // Users/pitch/DSSAT45/SweetCorn
+TMD // Users/pitch/DSSAT45/TOMATO
+TND // Users/pitch/DSSAT45/TANIER
+TRD // Users/pitch/DSSAT45/TARO
+VBD // Users/pitch/DSSAT45/VELVETBEAN
+VID // Users/pitch/DSSAT45/
+WHD // Users/pitch/DSSAT45/WHEAT
+U1D // Users/pitch/DSSAT45/CROP1
+U2D // Users/pitch/DSSAT45/CROP2
+OTD // Users/pitch/DSSAT45/
+ASD // Users/pitch/DSSAT45/Seasonal
+AQD // Users/pitch/DSSAT45/Sequence
+APD // Users/pitch/DSSAT45/Spatial
+PSD // Users/pitch/DSSAT45/PEST
+ECD // Users/pitch/DSSAT45/ECONOMIC
+TOD // Users/pitch/DSSAT45/
+    // Users/pitch/DSSAT45/
