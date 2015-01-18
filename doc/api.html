@@ -41,9 +41,6 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
           <a href="bug_reports.html" title="Bug reports"
              accesskey="N">next</a> |</li>
         <li class="right" >
@@ -104,226 +101,16 @@
 <div class="section" id="import-f2py-generated-library">
 <h2>Import f2py generated library<a class="headerlink" href="#import-f2py-generated-library" title="Permalink to this headline">¶</a></h2>
 <img alt="_images/structure.jpg" src="_images/structure.jpg" />
-<span class="target" id="module-DSSAT_LIBRARY"></span><dl class="class">
-<dt id="DSSAT_LIBRARY.Model">
-<em class="property">class </em><tt class="descclassname">DSSAT_LIBRARY.</tt><tt class="descname">Model</tt><big>(</big><em>rnmode='S'</em>, <em>fileb='run.v45'</em>, <em>filectl='../DSCSM045.CTR'</em>, <em>filex=''</em>, <em>fileio=''</em>, <em>trnarg=''</em>, <em>output_file_name='/Summary.OUT'</em><big>)</big><a class="headerlink" href="#DSSAT_LIBRARY.Model" title="Permalink to this definition">¶</a></dt>
-<dd><p>This class is for running the DSSAT model.</p>
-<p>Args:</p>
-<blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">rnmode (str):</th><td class="field-body">running mode</td>
-</tr>
-<tr class="field-even field"><th class="field-name">fileb (str):</th><td class="field-body">batchfile</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">filectl (str):</th><td class="field-body">control file</td>
-</tr>
-<tr class="field-even field"><th class="field-name">filex (str):</th><td class="field-body">experiment file</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">fileio (str):</th><td class="field-body">I/O</td>
-</tr>
-<tr class="field-even field"><th class="field-name">trnarg (str):</th><td class="field-body">treatment argument</td>
-</tr>
-</tbody>
-</table>
-<p>Returns: Output file Summary.OUT</p>
-</div></blockquote>
-<dl class="method">
-<dt id="DSSAT_LIBRARY.Model.run">
-<tt class="descname">run</tt><big>(</big><big>)</big><a class="headerlink" href="#DSSAT_LIBRARY.Model.run" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function is used to run the DSSAT model by calling the Wrapped fortran code</p>
-<p>Returns: Output file Summary.OUT</p>
-</dd></dl>
-
-</dd></dl>
-
 </div>
 <div class="section" id="prepare-the-input-files">
 <h2>Prepare the input files<a class="headerlink" href="#prepare-the-input-files" title="Permalink to this headline">¶</a></h2>
 <img alt="_images/input.jpg" src="_images/input.jpg" />
-<span class="target" id="module-DSSAT_LIBRARY"></span><dl class="class">
-<dt id="DSSAT_LIBRARY.File">
-<em class="property">class </em><tt class="descclassname">DSSAT_LIBRARY.</tt><tt class="descname">File</tt><big>(</big><em>crop='Maize'</em>, <em>soil='Sand'</em>, <em>weather='DTCM'</em>, <em>st_yr=1948</em>, <em>ed_yr=2012</em>, <em>plant_month=6</em>, <em>plant_date=10</em>, <em>mode='S'</em><big>)</big><a class="headerlink" href="#DSSAT_LIBRARY.File" title="Permalink to this definition">¶</a></dt>
-<dd><p>This class is for input files writing and preparing for model running. It contains experiment file and batch file writing.</p>
-<p>Args:</p>
-<blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">crop (str):</th><td class="field-body">crop type</td>
-</tr>
-<tr class="field-even field"><th class="field-name">soil (str):</th><td class="field-body">soil type</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">weather (str):</th><td class="field-body">weather station name</td>
-</tr>
-<tr class="field-even field"><th class="field-name">st_yr (int):</th><td class="field-body">start year of simulation</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">ed_yr (int):</th><td class="field-body">end year of simulation</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2">plant_month (int):</th></tr>
-<tr class="field-even field"><td>&nbsp;</td><td class="field-body">month of the planting date</td>
-</tr>
-<tr class="field-odd field"><th class="field-name" colspan="2">plant_date (int):</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">date of the planting date</td>
-</tr>
-<tr class="field-even field"><th class="field-name">mode (str):</th><td class="field-body">running mode</td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-<dl class="method">
-<dt id="DSSAT_LIBRARY.File.Batch">
-<tt class="descname">Batch</tt><big>(</big><big>)</big><a class="headerlink" href="#DSSAT_LIBRARY.File.Batch" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function is used to write the batch file.</p>
-<p>Returns: Input batch file. e.g., run.v45</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="DSSAT_LIBRARY.File.Control">
-<tt class="descname">Control</tt><big>(</big><big>)</big><a class="headerlink" href="#DSSAT_LIBRARY.File.Control" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function is used to write the experiment file.</p>
-<p>Returns: Input experiment file. e.g., DTCM1951.GSX</p>
-</dd></dl>
-
-</dd></dl>
-
 </div>
 <div class="section" id="post-process">
 <h2>Post-process<a class="headerlink" href="#post-process" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
 <img alt="_images/output.jpg" src="_images/output.jpg" />
 </div>
-<span class="target" id="module-DSSAT_LIBRARY"></span><dl class="class">
-<dt id="DSSAT_LIBRARY.postProcess">
-<em class="property">class </em><tt class="descclassname">DSSAT_LIBRARY.</tt><tt class="descname">postProcess</tt><big>(</big><em>baseDir</em>, <em>CDEFileName</em><big>)</big><a class="headerlink" href="#DSSAT_LIBRARY.postProcess" title="Permalink to this definition">¶</a></dt>
-<dd><p>This class is for post-process DSSAT output.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">You <strong>should</strong> first import this class before calling any functions.</p>
-</div>
-<dl class="method">
-<dt id="DSSAT_LIBRARY.postProcess.Create_NETCDF_File">
-<tt class="descname">Create_NETCDF_File</tt><big>(</big><em>dims</em>, <em>inFileName</em>, <em>outFileName</em><big>)</big><a class="headerlink" href="#DSSAT_LIBRARY.postProcess.Create_NETCDF_File" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function is used to convert the text file to NetCDF.</p>
-<p>Args:</p>
-<blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">dims (dic):</th><td class="field-body">header information for netcdf file</td>
-</tr>
-<tr class="field-even field"><th class="field-name" colspan="2">inFileName (str):</th></tr>
-<tr class="field-even field"><td>&nbsp;</td><td class="field-body">File name for the text file</td>
-</tr>
-<tr class="field-odd field"><th class="field-name" colspan="2">outFileName (str):</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">File name for the NetCDF file</td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>You <strong>should</strong> define the header information for the NetCDF file in your driver program like this:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">dims</span>            <span class="o">=</span> <span class="p">{}</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">dims</span><span class="p">[</span><span class="s">&#39;nlat&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="mi">1</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">dims</span><span class="p">[</span><span class="s">&#39;nlon&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="mi">1</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">dims</span><span class="p">[</span><span class="s">&#39;res&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="mi">1</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">dims</span><span class="p">[</span><span class="s">&#39;minlat&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">10</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">dims</span><span class="p">[</span><span class="s">&#39;minlon&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">10</span>
-</pre></div>
-</div>
-<div class="last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">dims</span><span class="p">[</span><span class="s">&#39;tStep&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-</dd></dl>
-
-<dl class="method">
-<dt id="DSSAT_LIBRARY.postProcess.drawTimeSeries">
-<tt class="descname">drawTimeSeries</tt><big>(</big><em>fileName</em>, <em>varName</em><big>)</big><a class="headerlink" href="#DSSAT_LIBRARY.postProcess.drawTimeSeries" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function is used to draw the time series.</p>
-<p>Args:</p>
-<blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">fileName (str):</th><td class="field-body">The simulaton file to use</td>
-</tr>
-<tr class="field-even field"><th class="field-name">varName (str):</th><td class="field-body">Variable to plot</td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">drawTimeSeries</span><span class="p">(</span><span class="s">&#39;Summary.OUT&#39;</span><span class="p">,</span><span class="s">&#39;HWAM&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="method">
-<dt id="DSSAT_LIBRARY.postProcess.getVarDes">
-<tt class="descname">getVarDes</tt><big>(</big><big>)</big><a class="headerlink" href="#DSSAT_LIBRARY.postProcess.getVarDes" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function is used to get variable&#8217;s label and description from the .CDE file.</p>
-<p>Returns:</p>
-<blockquote>
-<div>sumOutCDEDic (dictionary): Variables in DSSAT summary output</div></blockquote>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">sumOutDic</span> <span class="o">=</span> <span class="n">getVarDes</span><span class="p">()</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="method">
-<dt id="DSSAT_LIBRARY.postProcess.getVarValues">
-<tt class="descname">getVarValues</tt><big>(</big><em>fileName</em><big>)</big><a class="headerlink" href="#DSSAT_LIBRARY.postProcess.getVarValues" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function is used to extract the data for each variables.</p>
-<p>Args:</p>
-<blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">filename (str):</th><td class="field-body">The simulaton file to use</td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-<p>Returns:</p>
-<blockquote>
-<div><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">dataDic (dic):</th><td class="field-body">Dictionary associated with each variable</td>
-</tr>
-<tr class="field-even field"><th class="field-name">sYear (int):</th><td class="field-body">start year</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">eYear (int):</th><td class="field-body">end year</td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-<p>BTW, you can <strong>MODIFY</strong> the <cite>return</cite> value based on your own purpose. To use this function, just do like this:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">out</span><span class="p">,</span><span class="n">sYear</span><span class="p">,</span><span class="n">eYear</span><span class="p">]</span> <span class="o">=</span> <span class="n">getVarValues</span><span class="p">(</span><span class="s">&#39;Summary.OUT&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</dd></dl>
-
 </div>
 </div>
 
@@ -339,9 +126,6 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
         <li class="right" >
           <a href="bug_reports.html" title="Bug reports"
              >next</a> |</li>
