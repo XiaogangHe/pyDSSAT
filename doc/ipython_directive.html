@@ -1,0 +1,634 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Ipython Directive &mdash; pyDSSAT 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="pyDSSAT 1.0 documentation" href="index.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/Figures/logo.png" border="0" alt="py4sci"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="index.html">home</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Ipython Directive</a><ul>
+<li><a class="reference internal" href="#pseudo-decorators">Pseudo-Decorators</a></li>
+<li><a class="reference internal" href="#sphinx-source-for-this-tutorial">Sphinx source for this tutorial</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/ipython_directive.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ipython-directive">
+<span id="id1"></span><h1>Ipython Directive<a class="headerlink" href="#ipython-directive" title="Permalink to this headline">¶</a></h1>
+<p>The ipython directive is a stateful ipython shell for embedding in
+sphinx documents.  It knows about standard ipython prompts, and
+extracts the input and output lines.  These prompts will be renumbered
+starting at <tt class="docutils literal"><span class="pre">1</span></tt>.  The inputs will be fed to an embedded ipython
+interpreter and the outputs from that interpreter will be inserted as
+well.  For example, code blocks like the following:</p>
+<div class="highlight-python"><div class="highlight"><pre>.. ipython::
+
+   In [136]: x = 2
+
+   In [137]: x**3
+   Out[137]: 8
+</pre></div>
+</div>
+<p>will be rendered as</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [1]: </span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="gp">In [2]: </span><span class="n">x</span><span class="o">**</span><span class="mi">3</span>
+<span class="gh">Out[2]: </span><span class="go">8</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This tutorial should be read side-by-side with the Sphinc source
+for this document (see <a class="reference internal" href="#ipython-literal"><em>Sphinx source for this tutorial</em></a>) because otherwise
+you will see only the rendered output and not the code that
+generated it.  Excepting the example above, we will not in general
+be showing the liuteral rest in this document that generates the
+rendered output.</p>
+</div>
+<p>The state from previous sessions is stored, and standard error is
+trapped.  At doc build time, ipython&#8217;s output and std err will be
+inserted, and prompts will be renumbered.  So the prompt below should
+be renumbered in the rendered docs, and pick up where the block above
+left off.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [3]: </span><span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="mi">3</span>   <span class="c"># x is recalled from previous block</span>
+
+<span class="gp">In [4]: </span><span class="n">z</span>
+<span class="gh">Out[4]: </span><span class="go">6</span>
+
+<span class="gp">In [5]: </span><span class="k">print</span> <span class="n">z</span>
+<span class="go">6</span>
+
+<span class="gp">In [6]: </span><span class="n">q</span> <span class="o">=</span> <span class="n">z</span><span class="p">[)</span>   <span class="c"># this is a syntax error -- we trap ipy exceptions</span>
+<span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-6-9e4a6c3ff9f7&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">z</span><span class="p">[)</span>   <span class="c"># this is a syntax error -- we trap ipy exceptions</span>
+          <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+<p>The embedded interpreter supports some limited markup.  For example,
+you can put comments in your ipython sessions, which are reported
+verbatim.  There are some handy &#8220;pseudo-decorators&#8221; that let you
+doctest the output.  The inputs are fed to an embedded ipython
+session and the outputs from the ipython session are inserted into
+your doc.  If the output in your doc and in the ipython session don&#8217;t
+match on a doctest assertion, an error will be</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [7]: </span><span class="n">x</span> <span class="o">=</span> <span class="s">&#39;hello world&#39;</span>
+
+<span class="go"># this will raise an error if the ipython output is different</span>
+<span class="gp">In [8]: </span><span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="gh">Out[8]: </span><span class="go">&#39;HELLO WORLD&#39;</span>
+
+<span class="go"># some readline features cannot be supported, so we allow</span>
+<span class="go"># &quot;verbatim&quot; blocks, which are dumped in verbatim except prompts</span>
+<span class="go"># are continuously numbered</span>
+<span class="gp">In [9]: </span><span class="n">x</span><span class="o">.</span><span class="n">st</span><span class="o">&lt;</span><span class="n">TAB</span><span class="o">&gt;</span>
+<span class="go">x.startswith  x.strip</span>
+</pre></div>
+</div>
+<p>Multi-line input is supported.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [10]: </span><span class="n">url</span> <span class="o">=</span> <span class="s">&#39;http://ichart.finance.yahoo.com/table.csv?s=CROX</span><span class="se">\</span>
+<span class="gp">   ....: </span><span class="s">&amp;d=9&amp;e=22&amp;f=2009&amp;g=d&amp;a=1&amp;br=8&amp;c=2006&amp;ignore=.csv&#39;</span>
+<span class="gp">   ....: </span>
+
+<span class="gp">In [11]: </span><span class="k">print</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;&amp;&#39;</span><span class="p">)</span>
+<span class="go">[&#39;http://ichart.finance.yahoo.com/table.csv?s=CROX&#39;, &#39;d=9&#39;, &#39;e=22&#39;, &#39;f=2009&#39;, &#39;g=d&#39;, &#39;a=1&#39;, &#39;br=8&#39;, &#39;c=2006&#39;, &#39;ignore=.csv&#39;]</span>
+</pre></div>
+</div>
+<p>&#8216;f=2009&#8217;, &#8216;g=d&#8217;, &#8216;a=1&#8217;, &#8216;b=8&#8217;, &#8216;c=2006&#8217;, &#8216;ignore=.csv&#8217;]</p>
+<blockquote>
+<div>In [60]: import urllib</div></blockquote>
+<p>You can do doctesting on multi-line output as well.  Just be careful
+when using non-deterministic inputs like random numbers in the ipython
+directive, because your inputs are ruin through a live interpreter, so
+if you are doctesting random output you will get an error.  Here we
+&#8220;seed&#8221; the random number generator for deterministic output, and we
+suppress the seed line so it doesn&#8217;t show up in the rendered output</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [12]: </span><span class="kn">import</span> <span class="nn">numpy.random</span>
+
+<span class="gp">In [13]: </span><span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="gh">Out[13]: </span><span class="go"></span>
+<span class="go">array([[ 0.64524308,  0.59943846],</span>
+<span class="go">       [ 0.47102322,  0.8715456 ],</span>
+<span class="go">       [ 0.29370834,  0.74776844],</span>
+<span class="go">       [ 0.99539577,  0.1313423 ],</span>
+<span class="go">       [ 0.16250302,  0.21103583],</span>
+<span class="go">       [ 0.81626524,  0.1312433 ],</span>
+<span class="go">       [ 0.67338089,  0.72302393],</span>
+<span class="go">       [ 0.7566368 ,  0.07033696],</span>
+<span class="go">       [ 0.22591016,  0.77731835],</span>
+<span class="go">       [ 0.0072729 ,  0.34273127]])</span>
+</pre></div>
+</div>
+<p>Another demonstration of multi-line input and output</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [14]: </span><span class="k">print</span> <span class="n">x</span>
+<span class="go">hello world</span>
+
+<span class="gp">In [15]: </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<span class="gp">   ....: </span>    <span class="k">print</span> <span class="n">i</span>
+<span class="gp">   ....: </span>
+<span class="gp">   ....: </span>
+<span class="go">0</span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+<span class="go">4</span>
+<span class="go">5</span>
+<span class="go">6</span>
+<span class="go">7</span>
+<span class="go">8</span>
+<span class="go">9</span>
+</pre></div>
+</div>
+<p>Most of the &#8220;pseudo-decorators&#8221; can be used an options to ipython
+mode.  For example, to setup matplotlib pylab but suppress the output,
+you can do.  When using the matplotlib <tt class="docutils literal"><span class="pre">use</span></tt> directive, it should
+occur before any import of pylab.  This will not show up in the
+rendered docs, but the commands will be executed in the embedded
+interpreter and subsequent line numbers will be incremented to reflect
+the inputs:</p>
+<div class="highlight-python"><div class="highlight"><pre>.. ipython::
+   :suppress:
+
+   In [144]: from pylab import *
+
+   In [145]: ion()
+</pre></div>
+</div>
+<p>Likewise, you can set <tt class="docutils literal"><span class="pre">:doctest:</span></tt> or <tt class="docutils literal"><span class="pre">:verbatim:</span></tt> to apply these
+settings to the entire block.  For example,</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [16]: </span><span class="n">cd</span> <span class="n">mpl</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span>
+<span class="go">/home/jdhunter/mpl/examples</span>
+
+<span class="gp">In [17]: </span><span class="n">pwd</span>
+<span class="gh">Out[17]: </span><span class="go">&#39;/home/jdhunter/mpl/examples&#39;</span>
+
+<span class="gp">In [18]: </span><span class="n">cd</span> <span class="n">mpl</span><span class="o">/</span><span class="n">examples</span><span class="o">/&lt;</span><span class="n">TAB</span><span class="o">&gt;</span>
+<span class="go">mpl/examples/animation/        mpl/examples/misc/</span>
+<span class="go">mpl/examples/api/              mpl/examples/mplot3d/</span>
+<span class="go">mpl/examples/axes_grid/        mpl/examples/pylab_examples/</span>
+<span class="go">mpl/examples/event_handling/   mpl/examples/widgets</span>
+
+<span class="gp">In [19]: </span><span class="n">cd</span> <span class="n">mpl</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">widgets</span><span class="o">/</span>
+<span class="go">/home/jdhunter/mpl/examples/widgets</span>
+
+<span class="gp">In [20]: </span><span class="o">!</span>wc *
+<span class="go">    2    12    77 README.txt</span>
+<span class="go">   40    97   884 buttons.py</span>
+<span class="go">   26    90   712 check_buttons.py</span>
+<span class="go">   19    52   416 cursor.py</span>
+<span class="go">  180   404  4882 menu.py</span>
+<span class="go">   16    45   337 multicursor.py</span>
+<span class="go">   36   106   916 radio_buttons.py</span>
+<span class="go">   48   226  2082 rectangle_selector.py</span>
+<span class="go">   43   118  1063 slider_demo.py</span>
+<span class="go">   40   124  1088 span_selector.py</span>
+<span class="go">  450  1274 12457 total</span>
+</pre></div>
+</div>
+<p>You can create one or more pyplot plots and insert them with the
+<tt class="docutils literal"><span class="pre">&#64;savefig</span></tt> decorator.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [21]: </span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]);</span>
+
+<span class="go"># use a semicolon to suppress the output</span>
+<span class="gp">In [22]: </span><span class="n">hist</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10000</span><span class="p">),</span> <span class="mi">100</span><span class="p">);</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/plot_simple.png"><img alt="_images/plot_simple.png" src="_images/plot_simple.png" style="width: 4in;" /></a>
+<a class="reference internal image-reference" href="_images/hist_simple.png"><img alt="_images/hist_simple.png" src="_images/hist_simple.png" style="width: 4in;" /></a>
+<p>In a subsequent session, we can update the current figure with some
+text, and then resave</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [23]: </span><span class="n">ylabel</span><span class="p">(</span><span class="s">&#39;number&#39;</span><span class="p">)</span>
+<span class="gh">Out[23]: </span><span class="go">&lt;matplotlib.text.Text at 0x108120950&gt;</span>
+
+<span class="gp">In [24]: </span><span class="n">title</span><span class="p">(</span><span class="s">&#39;normal distribution&#39;</span><span class="p">)</span>
+<span class="gh">Out[24]: </span><span class="go">&lt;matplotlib.text.Text at 0x1081541d0&gt;</span>
+
+<span class="gp">In [25]: </span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/hist_with_text.png"><img alt="_images/hist_with_text.png" src="_images/hist_with_text.png" style="width: 4in;" /></a>
+<div class="section" id="pseudo-decorators">
+<h2>Pseudo-Decorators<a class="headerlink" href="#pseudo-decorators" title="Permalink to this headline">¶</a></h2>
+<p>Here are the supported decorators, and any optional arguments they
+take.  Some of the decorators can be used as options to the entire
+block (eg <tt class="docutils literal"><span class="pre">verbatim</span></tt> and <tt class="docutils literal"><span class="pre">suppress</span></tt>), and some only apply to the
+line just below them (eg <tt class="docutils literal"><span class="pre">savefig</span></tt>).</p>
+<p>&#64;suppress</p>
+<blockquote>
+<div>execute the ipython input block, but suppress the input and output
+block from the rendered output.  Also, can be applied to the entire
+<tt class="docutils literal"><span class="pre">..ipython</span></tt> block as a directive option with <tt class="docutils literal"><span class="pre">:suppress:</span></tt>.</div></blockquote>
+<p>&#64;verbatim</p>
+<blockquote>
+<div>insert the input and output block in verbatim, but auto-increment
+the line numbers. Internally, the interpreter will be fed an empty
+string, so it is a no-op that keeps line numbering consistent.
+Also, can be applied to the entire <tt class="docutils literal"><span class="pre">..ipython</span></tt> block as a
+directive option with <tt class="docutils literal"><span class="pre">:verbatim:</span></tt>.</div></blockquote>
+<p>&#64;savefig OUTFILE [IMAGE_OPTIONS]</p>
+<blockquote>
+<div>save the figure to the static directory and insert it into the
+document, possibly binding it into a minipage and/or putting
+code/figure label/references to associate the code and the
+figure. Takes args to pass to the image directive (<em>scale</em>,
+<em>width</em>, etc can be kwargs); see <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html#image">image options</a>
+for details.</div></blockquote>
+<p>&#64;doctest</p>
+<blockquote>
+<div>Compare the pasted in output in the ipython block with the output
+generated at doc build time, and raise errors if they don’t
+match. Also, can be applied to the entire <tt class="docutils literal"><span class="pre">..ipython</span></tt> block as a
+directive option with <tt class="docutils literal"><span class="pre">:doctest:</span></tt>.</div></blockquote>
+</div>
+<div class="section" id="sphinx-source-for-this-tutorial">
+<span id="ipython-literal"></span><h2>Sphinx source for this tutorial<a class="headerlink" href="#sphinx-source-for-this-tutorial" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>.. _ipython_directive:
+
+=================
+Ipython Directive
+=================
+
+The ipython directive is a stateful ipython shell for embedding in
+sphinx documents.  It knows about standard ipython prompts, and
+extracts the input and output lines.  These prompts will be renumbered
+starting at ``1``.  The inputs will be fed to an embedded ipython
+interpreter and the outputs from that interpreter will be inserted as
+well.  For example, code blocks like the following::
+
+  .. ipython::
+
+     In [136]: x = 2
+
+     In [137]: x**3
+     Out[137]: 8
+
+will be rendered as
+
+.. ipython::
+
+   In [136]: x = 2
+
+   In [137]: x**3
+   Out[137]: 8
+
+.. note::
+
+   This tutorial should be read side-by-side with the Sphinc source
+   for this document (see :ref:`ipython_literal`) because otherwise
+   you will see only the rendered output and not the code that
+   generated it.  Excepting the example above, we will not in general
+   be showing the liuteral rest in this document that generates the
+   rendered output.
+
+
+The state from previous sessions is stored, and standard error is
+trapped.  At doc build time, ipython&#39;s output and std err will be
+inserted, and prompts will be renumbered.  So the prompt below should
+be renumbered in the rendered docs, and pick up where the block above
+left off.
+
+.. ipython::
+
+  In [138]: z = x*3   # x is recalled from previous block
+
+  In [139]: z
+  Out[139]: 6
+
+  In [140]: print z
+  --------&gt; print(z)
+  6
+
+  In [141]: q = z[)   # this is a syntax error -- we trap ipy exceptions
+  ------------------------------------------------------------
+     File &quot;&lt;ipython console&gt;&quot;, line 1
+       q = z[)   # this is a syntax error -- we trap ipy exceptions
+	     ^
+  SyntaxError: invalid syntax
+
+
+The embedded interpreter supports some limited markup.  For example,
+you can put comments in your ipython sessions, which are reported
+verbatim.  There are some handy &quot;pseudo-decorators&quot; that let you
+doctest the output.  The inputs are fed to an embedded ipython
+session and the outputs from the ipython session are inserted into
+your doc.  If the output in your doc and in the ipython session don&#39;t
+match on a doctest assertion, an error will be
+
+
+.. ipython::
+
+   In [1]: x = &#39;hello world&#39;
+
+   # this will raise an error if the ipython output is different
+   @doctest
+   In [2]: x.upper()
+   Out[2]: &#39;HELLO WORLD&#39;
+
+   # some readline features cannot be supported, so we allow
+   # &quot;verbatim&quot; blocks, which are dumped in verbatim except prompts
+   # are continuously numbered
+   @verbatim
+   In [3]: x.st&lt;TAB&gt;
+   x.startswith  x.strip
+
+
+Multi-line input is supported.
+
+.. ipython::
+
+   In [130]: url = &#39;http://ichart.finance.yahoo.com/table.csv?s=CROX\
+      .....: &amp;d=9&amp;e=22&amp;f=2009&amp;g=d&amp;a=1&amp;br=8&amp;c=2006&amp;ignore=.csv&#39;
+
+   In [131]: print url.split(&#39;&amp;&#39;)
+   --------&gt; print(url.split(&#39;&amp;&#39;))
+   [&#39;http://ichart.finance.yahoo.com/table.csv?s=CROX&#39;, &#39;d=9&#39;, &#39;e=22&#39;,
+&#39;f=2009&#39;, &#39;g=d&#39;, &#39;a=1&#39;, &#39;b=8&#39;, &#39;c=2006&#39;, &#39;ignore=.csv&#39;]
+
+   In [60]: import urllib
+
+
+You can do doctesting on multi-line output as well.  Just be careful
+when using non-deterministic inputs like random numbers in the ipython
+directive, because your inputs are ruin through a live interpreter, so
+if you are doctesting random output you will get an error.  Here we
+&quot;seed&quot; the random number generator for deterministic output, and we
+suppress the seed line so it doesn&#39;t show up in the rendered output
+
+.. ipython::
+
+   In [133]: import numpy.random
+
+   @suppress
+   In [134]: numpy.random.seed(2358)
+
+   @doctest
+   In [135]: numpy.random.rand(10,2)
+   Out[135]:
+   array([[ 0.64524308,  0.59943846],
+	  [ 0.47102322,  0.8715456 ],
+	  [ 0.29370834,  0.74776844],
+	  [ 0.99539577,  0.1313423 ],
+	  [ 0.16250302,  0.21103583],
+	  [ 0.81626524,  0.1312433 ],
+	  [ 0.67338089,  0.72302393],
+	  [ 0.7566368 ,  0.07033696],
+	  [ 0.22591016,  0.77731835],
+	  [ 0.0072729 ,  0.34273127]])
+
+
+Another demonstration of multi-line input and output
+
+.. ipython::
+
+   In [106]: print x
+   --------&gt; print(x)
+   jdh
+
+   In [109]: for i in range(10):
+      .....:     print i
+      .....:
+      .....:
+   0
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+   9
+
+
+Most of the &quot;pseudo-decorators&quot; can be used an options to ipython
+mode.  For example, to setup matplotlib pylab but suppress the output,
+you can do.  When using the matplotlib ``use`` directive, it should
+occur before any import of pylab.  This will not show up in the
+rendered docs, but the commands will be executed in the embedded
+interpreter and subsequent line numbers will be incremented to reflect
+the inputs::
+
+
+  .. ipython::
+     :suppress:
+
+     In [144]: from pylab import *
+
+     In [145]: ion()
+
+.. ipython::
+   :suppress:
+
+   In [144]: from pylab import *
+
+   In [145]: ion()
+
+Likewise, you can set ``:doctest:`` or ``:verbatim:`` to apply these
+settings to the entire block.  For example,
+
+.. ipython::
+   :verbatim:
+
+   In [9]: cd mpl/examples/
+   /home/jdhunter/mpl/examples
+
+   In [10]: pwd
+   Out[10]: &#39;/home/jdhunter/mpl/examples&#39;
+
+
+   In [14]: cd mpl/examples/&lt;TAB&gt;
+   mpl/examples/animation/        mpl/examples/misc/
+   mpl/examples/api/              mpl/examples/mplot3d/
+   mpl/examples/axes_grid/        mpl/examples/pylab_examples/
+   mpl/examples/event_handling/   mpl/examples/widgets
+
+   In [14]: cd mpl/examples/widgets/
+   /home/jdhunter/mpl/examples/widgets
+
+   In [15]: !wc *
+       2    12    77 README.txt
+      40    97   884 buttons.py
+      26    90   712 check_buttons.py
+      19    52   416 cursor.py
+     180   404  4882 menu.py
+      16    45   337 multicursor.py
+      36   106   916 radio_buttons.py
+      48   226  2082 rectangle_selector.py
+      43   118  1063 slider_demo.py
+      40   124  1088 span_selector.py
+     450  1274 12457 total
+
+
+
+You can create one or more pyplot plots and insert them with the
+``@savefig`` decorator.
+
+.. ipython::
+
+   @savefig plot_simple.png width=4in
+   In [151]: plot([1,2,3]);
+
+   # use a semicolon to suppress the output
+   @savefig hist_simple.png width=4in
+   In [151]: hist(np.random.randn(10000), 100);
+
+In a subsequent session, we can update the current figure with some
+text, and then resave
+
+.. ipython::
+
+
+   In [151]: ylabel(&#39;number&#39;)
+
+   In [152]: title(&#39;normal distribution&#39;)
+
+   @savefig hist_with_text.png width=4in
+   In [153]: grid(True)
+
+Pseudo-Decorators
+=================
+
+Here are the supported decorators, and any optional arguments they
+take.  Some of the decorators can be used as options to the entire
+block (eg ``verbatim`` and ``suppress``), and some only apply to the
+line just below them (eg ``savefig``).
+
+@suppress
+
+    execute the ipython input block, but suppress the input and output
+    block from the rendered output.  Also, can be applied to the entire
+    ``..ipython`` block as a directive option with ``:suppress:``.
+
+@verbatim
+
+    insert the input and output block in verbatim, but auto-increment
+    the line numbers. Internally, the interpreter will be fed an empty
+    string, so it is a no-op that keeps line numbering consistent.
+    Also, can be applied to the entire ``..ipython`` block as a
+    directive option with ``:verbatim:``.
+
+@savefig OUTFILE [IMAGE_OPTIONS]
+
+    save the figure to the static directory and insert it into the
+    document, possibly binding it into a minipage and/or putting
+    code/figure label/references to associate the code and the
+    figure. Takes args to pass to the image directive (*scale*,
+    *width*, etc can be kwargs); see `image options
+    &lt;http://docutils.sourceforge.net/docs/ref/rst/directives.html#image&gt;`_
+    for details.
+
+@doctest
+
+    Compare the pasted in output in the ipython block with the output
+    generated at doc build time, and raise errors if they don’t
+    match. Also, can be applied to the entire ``..ipython`` block as a
+    directive option with ``:doctest:``.
+
+.. _ipython_literal:
+
+Sphinx source for this tutorial
+====================================
+
+.. literalinclude:: ipython_directive.rst
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="index.html">home</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, Xiaogang HE, Liqing PENG, He SUN.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

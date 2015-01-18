@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Download and Install &mdash; pyDSSAT 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="pyDSSAT 1.0 documentation" href="index.html" />
+    <link rel="next" title="Getting started" href="getting_started.html" />
+    <link rel="prev" title="About pyDSSAT" href="about_pyDSSAT.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/Figures/logo.png" border="0" alt="py4sci"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="getting_started.html" title="Getting started"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="about_pyDSSAT.html" title="About pyDSSAT"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">home</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Download and Install</a><ul>
+<li><a class="reference internal" href="#before-you-install-and-use-pydssat">Before you install and use pyDSSAT</a></li>
+<li><a class="reference internal" href="#set-up-dssat-environment">Set Up DSSAT Environment</a><ul>
+<li><a class="reference internal" href="#copy-windows-dssat45-directory">Copy Windows DSSAT45 Directory</a></li>
+<li><a class="reference internal" href="#change-file-path">Change File Path</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#install-pydssat-library">Install pyDSSAT Library</a><ul>
+<li><a class="reference internal" href="#git-clone">Git Clone</a></li>
+<li><a class="reference internal" href="#copy-and-modify-dssat-source-code">Copy and Modify DSSAT Source Code</a></li>
+<li><a class="reference internal" href="#build-python-library">Build Python Library</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dependencies-for-install">Dependencies for install</a><ul>
+<li><a class="reference internal" href="#must-have">Must Have</a></li>
+<li><a class="reference internal" href="#strong-recommendations">Strong Recommendations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="about_pyDSSAT.html"
+                        title="previous chapter">About pyDSSAT</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="getting_started.html"
+                        title="next chapter">Getting started</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/install.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="download-and-install">
+<span id="install"></span><h1>Download and Install<a class="headerlink" href="#download-and-install" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="before-you-install-and-use-pydssat">
+<h2>Before you install and use pyDSSAT<a class="headerlink" href="#before-you-install-and-use-pydssat" title="Permalink to this headline">¶</a></h2>
+<p>We assume:</p>
+<ul>
+<li><p class="first">You have a valid license of DSSAT.</p>
+<p>Note: If you don&#8217;t, check it out! (<a class="reference external" href="http://dssat.net/">What&#8217;s DSSAT?</a>)
+To use DSSAT, you need to request the DSSAT software for Windows platform from <a class="reference external" href="http://dssat.net/downloads/dssat-v45">DSSAT webpage</a>.</p>
+</li>
+<li><p class="first">You’re one of the DSSAT developers and have access to the source code of CSM.</p>
+</li>
+<li><p class="first">You have good knowledge of DSSAT and CSM in general.</p>
+</li>
+<li><p class="first">You know how to run CSM from the command line.</p>
+</li>
+<li><p class="first">You have GNU Fortran Compiler (gfortran) or a valid license of Intel Fortran Compiler (ifort) for Linux/Unix.</p>
+<p>Note: If you don&#8217;t have the source code, you need to contact <a class="reference external" href="https://code.google.com/p/dssat-csm-v45/">DSSAT CSM ver 4.5 Open Source project</a> for it.
+After you have the source code, here is a tutorial about using DSSAT on Linux/Unix. (<a class="reference external" href="http://dssat.net/210">How can I compile and run DSSAT on Linux/Unix?</a>)</p>
+</li>
+</ul>
+</div>
+<div class="section" id="set-up-dssat-environment">
+<h2>Set Up DSSAT Environment<a class="headerlink" href="#set-up-dssat-environment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="copy-windows-dssat45-directory">
+<h3>Copy Windows DSSAT45 Directory<a class="headerlink" href="#copy-windows-dssat45-directory" title="Permalink to this headline">¶</a></h3>
+<p>Prepare your executing directory <strong>EXEPATH</strong> where you have all the input data files there (weather, soil, cultivar, ecotype, species, standard input, etc). We strongly recommend you copy the &#8220;DSSAT45&#8221; folder from Windows software under your account, e.g., ~/DSSAT45, which means <strong>EXEPATH</strong> =~.</p>
+</div>
+<div class="section" id="change-file-path">
+<h3>Change File Path<a class="headerlink" href="#change-file-path" title="Permalink to this headline">¶</a></h3>
+<p>No matter you run DSSAT from Linux or pyDSSAT, you need to set up the DSSAT environment. Use vi you can easily modify the path in the file DSSATPRO.v45:</p>
+<div class="highlight-python"><div class="highlight"><pre>cd ~/DSSAT45
+vi DSSATPRO.v45
+</pre></div>
+</div>
+<p>Change the windows directory format to linux directory format. Type the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre>:%s!\!/!g
+:%s!C:!EXEPATH!g
+</pre></div>
+</div>
+<p>Note that <strong>EXEPATH</strong> is the directory where you put the &#8220;DSSAT45&#8221;.</p>
+</div>
+</div>
+<div class="section" id="install-pydssat-library">
+<h2>Install pyDSSAT Library<a class="headerlink" href="#install-pydssat-library" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="git-clone">
+<h3>Git Clone<a class="headerlink" href="#git-clone" title="Permalink to this headline">¶</a></h3>
+<p>Enter the EXEPATH/DSSAT45 and install our pyDSSAT Library there.</p>
+<p>To install pyDSSAT library, please make a clone of the git repository from <a class="reference external" href="https://github.com/XiaogangHe/pyDSSAT">pyDSSAT</a>, by executing this command in your terminal, which includes the source code of our pyDSSAT python libraries. You should find a new directory &#8220;pyDSSAT under the folder EXEPATH/DSSAT45/&#8221; right now:</p>
+<div class="highlight-python"><div class="highlight"><pre>cd ~/DSSAT45
+git clone https://github.com/XiaogangHe/pyDSSAT
+</pre></div>
+</div>
+</div>
+<div class="section" id="copy-and-modify-dssat-source-code">
+<h3>Copy and Modify DSSAT Source Code<a class="headerlink" href="#copy-and-modify-dssat-source-code" title="Permalink to this headline">¶</a></h3>
+<p>Enter the repository you just clone, and copy the DSSAT fortran source code (<strong>SRCPATH</strong> is the directory where you store your DSSAT source code) to the directory &#8220;src&#8221;:</p>
+<div class="highlight-python"><div class="highlight"><pre>cd pyDSSAT
+cp SRCPATH/*.FOR ./src
+cp SRCPATH/*.for ./src
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p class="first">Change source code extensions from .FOR and .for to .f90:</p>
+<div class="highlight-python"><div class="highlight"><pre>cp ./Tools/rename.sh ./src
+bash rename.sh
+</pre></div>
+</div>
+</li>
+<li><p class="first">Change the following lines in ModuleDefs.f90 to appear as follows. Note 6 blanks before 1st character:</p>
+<div class="highlight-python"><div class="highlight"><pre>!      CHARACTER(LEN=5), PARAMETER :: OPSYS = &#39;WINDO&#39;   !DOS, Windows
+      CHARACTER(LEN=5), PARAMETER :: OPSYS = &#39;LINUX&#39;   !Linux, UNIX
+</pre></div>
+</div>
+</li>
+</ol>
+<ol class="arabic" start="3">
+<li><p class="first">In the UTILS.f90 source, there were two commented out definitions of the type of the function SYSTEM that need to be uncommented.  The first was line 832:</p>
+<div class="highlight-python"><div class="highlight"><pre>INTEGER ERR, I, LUN, LUNTMP, SYS  !, SYSTEM
+</pre></div>
+</div>
+<p>Change it to:</p>
+<div class="highlight-python"><div class="highlight"><pre>INTEGER ERR, I, LUN, LUNTMP, SYS, SYSTEM
+</pre></div>
+</div>
+<p>The second one is line 914:</p>
+<div class="highlight-python"><div class="highlight"><pre>INTEGER i, COUNT, LUNLST, LUNTMP, SYS !, SYSTEM
+</pre></div>
+</div>
+<p>Change it to:</p>
+<div class="highlight-python"><div class="highlight"><pre>INTEGER i, COUNT, LUNLST, LUNTMP, SYS, SYSTEM
+</pre></div>
+</div>
+</li>
+</ol>
+<ol class="arabic" start="4">
+<li><p class="first">In CRSIMDEF.f90, change the following lines to read:</p>
+<div class="highlight-python"><div class="highlight"><pre>!      CHARACTER(LEN=1),PARAMETER::SLASH = &#39;\&#39; !DOS, Windows
+      CHARACTER(LEN=1),PARAMETER::SLASH = &#39;/&#39; !Linux, Unix
+</pre></div>
+</div>
+</li>
+</ol>
+<p>In case you didn&#8217;t know, here is the tutorial about using DSSAT on Linux/Unix. (<a class="reference external" href="http://dssat.net/210">How can I compile and run DSSAT on Linux/Unix?</a>)</p>
+</div>
+<div class="section" id="build-python-library">
+<h3>Build Python Library<a class="headerlink" href="#build-python-library" title="Permalink to this headline">¶</a></h3>
+<p>Compile DSSAT and generate the python library using <a class="reference external" href="http://docs.scipy.org/doc/numpy-dev/f2py/">f2py</a>:</p>
+<div class="highlight-python"><div class="highlight"><pre>cd PyScripts
+python ./make.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="dependencies-for-install">
+<h2>Dependencies for install<a class="headerlink" href="#dependencies-for-install" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="must-have">
+<h3>Must Have<a class="headerlink" href="#must-have" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://git-scm.com/">Git</a></li>
+<li><a class="reference external" href="https://www.python.org/">Python</a>: 2.5 or later</li>
+<li><a class="reference external" href="http://www.numpy.org/">NumPy</a>: 1.2 or later:  Numpy is an array library for Python
+numpy</li>
+<li><a class="reference external" href="http://matplotlib.org/index.html">Matplotlib</a>: python plotting library.</li>
+<li><a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/docs/">NetCDF</a>: NetCDF 4 library.</li>
+</ul>
+</div>
+<div class="section" id="strong-recommendations">
+<h3>Strong Recommendations<a class="headerlink" href="#strong-recommendations" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://ipython.org/">IPython</a>: Interactive Python environment.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="getting_started.html" title="Getting started"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="about_pyDSSAT.html" title="About pyDSSAT"
+             >previous</a> |</li>
+        <li><a href="index.html">home</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, Xiaogang HE, Liqing PENG, He SUN.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

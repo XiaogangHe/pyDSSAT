@@ -1,0 +1,130 @@
+.. _install:
+
+********************
+Download and Install
+********************
+
+Before you install and use pyDSSAT
+==================================
+We assume:
+
+* You have a valid license of DSSAT.
+
+  Note: If you don't, check it out! (`What's DSSAT? <http://dssat.net/>`_)
+  To use DSSAT, you need to request the DSSAT software for Windows platform from `DSSAT webpage <http://dssat.net/downloads/dssat-v45>`_.
+* You’re one of the DSSAT developers and have access to the source code of CSM. 
+* You have good knowledge of DSSAT and CSM in general.
+* You know how to run CSM from the command line.
+* You have GNU Fortran Compiler (gfortran) or a valid license of Intel Fortran Compiler (ifort) for Linux/Unix.
+
+  Note: If you don't have the source code, you need to contact `DSSAT CSM ver 4.5 Open Source project <https://code.google.com/p/dssat-csm-v45/>`_ for it.
+  After you have the source code, here is a tutorial about using DSSAT on Linux/Unix. (`How can I compile and run DSSAT on Linux/Unix? <http://dssat.net/210>`_)
+
+Set Up DSSAT Environment 
+========================
+Copy Windows DSSAT45 Directory
+------------------------------
+Prepare your executing directory **EXEPATH** where you have all the input data files there (weather, soil, cultivar, ecotype, species, standard input, etc). We strongly recommend you copy the "DSSAT45" folder from Windows software under your account, e.g., ~/DSSAT45, which means **EXEPATH** =~.
+
+Change File Path
+----------------
+No matter you run DSSAT from Linux or pyDSSAT, you need to set up the DSSAT environment. Use vi you can easily modify the path in the file DSSATPRO.v45::
+     
+    cd ~/DSSAT45
+    vi DSSATPRO.v45
+
+Change the windows directory format to linux directory format. Type the following command::
+    
+    :%s!\!/!g
+    :%s!C:!EXEPATH!g
+
+Note that **EXEPATH** is the directory where you put the "DSSAT45".
+
+
+Install pyDSSAT Library
+=======================
+
+Git Clone
+---------
+Enter the EXEPATH/DSSAT45 and install our pyDSSAT Library there. 
+
+To install pyDSSAT library, please make a clone of the git repository from `pyDSSAT <https://github.com/XiaogangHe/pyDSSAT>`_, by executing this command in your terminal, which includes the source code of our pyDSSAT python libraries. You should find a new directory "pyDSSAT under the folder EXEPATH/DSSAT45/" right now::
+
+    cd ~/DSSAT45
+    git clone https://github.com/XiaogangHe/pyDSSAT
+
+Copy and Modify DSSAT Source Code
+---------------------------------
+Enter the repository you just clone, and copy the DSSAT fortran source code (**SRCPATH** is the directory where you store your DSSAT source code) to the directory "src"::
+
+    cd pyDSSAT
+    cp SRCPATH/*.FOR ./src
+    cp SRCPATH/*.for ./src
+
+1. Change source code extensions from .FOR and .for to .f90::
+
+    cp ./Tools/rename.sh ./src
+    bash rename.sh
+
+2. Change the following lines in ModuleDefs.f90 to appear as follows. Note 6 blanks before 1st character::  
+
+    !      CHARACTER(LEN=5), PARAMETER :: OPSYS = 'WINDO'   !DOS, Windows
+          CHARACTER(LEN=5), PARAMETER :: OPSYS = 'LINUX'   !Linux, UNIX
+
+(3) In the UTILS.f90 source, there were two commented out definitions of the type of the function SYSTEM that need to be uncommented.  The first was line 832::
+
+          INTEGER ERR, I, LUN, LUNTMP, SYS  !, SYSTEM
+
+    Change it to:: 
+
+          INTEGER ERR, I, LUN, LUNTMP, SYS, SYSTEM
+
+    The second one is line 914::
+
+          INTEGER i, COUNT, LUNLST, LUNTMP, SYS !, SYSTEM
+
+    Change it to:: 
+
+          INTEGER i, COUNT, LUNLST, LUNTMP, SYS, SYSTEM
+
+4. In CRSIMDEF.f90, change the following lines to read:: 
+
+    !      CHARACTER(LEN=1),PARAMETER::SLASH = '\' !DOS, Windows
+          CHARACTER(LEN=1),PARAMETER::SLASH = '/' !Linux, Unix
+
+In case you didn't know, here is the tutorial about using DSSAT on Linux/Unix. (`How can I compile and run DSSAT on Linux/Unix? <http://dssat.net/210>`_)
+
+
+Build Python Library
+--------------------
+Compile DSSAT and generate the python library using `f2py <http://docs.scipy.org/doc/numpy-dev/f2py/>`_::
+    
+    cd PyScripts
+    python ./make.py
+
+Dependencies for install
+========================
+
+Must Have
+---------
+
+* Git_
+* Python_: 2.5 or later
+* NumPy_: 1.2 or later:  Numpy is an array library for Python
+  numpy
+* Matplotlib_: python plotting library.
+* NetCDF_: NetCDF 4 library.
+
+Strong Recommendations
+----------------------
+
+* IPython_: Interactive Python environment.
+
+.. _Git: http://git-scm.com/
+.. _Python: https://www.python.org/
+.. _Numpy: http://www.numpy.org/
+.. _Matplotlib: http://matplotlib.org/index.html
+.. _NetCDF: https://www.unidata.ucar.edu/software/netcdf/docs/
+.. _Ipython: http://ipython.org/
+
+

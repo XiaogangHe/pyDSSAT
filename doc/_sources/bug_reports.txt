@@ -1,0 +1,11 @@
+.. _bug_reports:
+
+*******************
+Bug reports
+*******************
+
+**Find a bug?**
+
+If you find a bug in pyDSSAT, please send an email to hexg@princeton.edu.
+
+Thanks!

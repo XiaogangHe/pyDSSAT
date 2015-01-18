@@ -1,0 +1,39 @@
+.. _api:
+
+*******************
+API
+*******************
+
+Import f2py generated library
+===================
+
+.. image:: _static/Figures/structure.jpg
+.. automodule:: DSSAT_LIBRARY
+.. autoclass:: Model 
+   :members: 
+   :private-members:
+   :undoc-members:
+
+
+Prepare the input files
+===================
+
+.. image:: _static/Figures/input.jpg
+.. automodule:: DSSAT_LIBRARY
+.. autoclass:: File 
+   :members: 
+   :private-members:
+   :undoc-members:
+
+Post-process
+===================
+
+.. figure:: _static/Figures/output.jpg
+   :align: center
+
+.. automodule:: DSSAT_LIBRARY
+.. autoclass:: postProcess 
+   :members: 
+   :private-members:
+   :undoc-members:
+

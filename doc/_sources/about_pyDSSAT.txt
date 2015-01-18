@@ -1,0 +1,16 @@
+.. _about_pyDSSAT:
+
+*******************
+About pyDSSAT
+*******************
+
+Python Interface for Crop Model DSSAT
+=====================================
+The python library pyDSSAT is a set of wrapper scripts which initialize, run and post process the Decision support system for agrotechnology transfer model (DSSAT). It is developed for the primary purpose of agriculture research based on DSSAT crop model, and for research in different fields such as climate, meteorology, ecology, and hydrology involving agriculture. 
+
+
+In general, this python library is not only convenient for beginners to use rather than execute original Fortran program on Linux, but also valuable for researchers to utilize crop model for different purposes. In particular, pyDSSAT wrap the fortran code into a callable class using f2py. It includes many enhancements over the terminal command line execution, including the ability of controlling input files, analyzing output files with Matplotlib capabilities, and providing a GUI toolkit for efficient interactive work. Many useful tools, such as output file convertor, time series analysis, are newly implemented in the library. More tools will be implemented continuously. 
+
+
+pyDSSAT is developed as part of the final project for the course APC524 (Software Engineering for Scientific Computing) at Princeton University.
+

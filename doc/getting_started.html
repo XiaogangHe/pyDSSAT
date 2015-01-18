@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting started &mdash; pyDSSAT 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="pyDSSAT 1.0 documentation" href="index.html" />
+    <link rel="next" title="API" href="api.html" />
+    <link rel="prev" title="Download and Install" href="install.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/Figures/logo.png" border="0" alt="py4sci"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="API"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Download and Install"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">home</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Getting started</a><ul>
+<li><a class="reference internal" href="#use-pydssat-in-the-terminal">Use pyDSSAT in the terminal</a></li>
+<li><a class="reference internal" href="#use-pydssat-gui">Use pyDSSAT GUI</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="install.html"
+                        title="previous chapter">Download and Install</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="api.html"
+                        title="next chapter">API</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/getting_started.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="getting-started">
+<span id="id1"></span><h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>This page will show you how easy it is to take control of our pyDSSAT model.
+There are two options to use pyDSSAT either through terminal or GUI as shown below.</p>
+<div class="section" id="use-pydssat-in-the-terminal">
+<span id="pydssat-terminal"></span><h2>Use pyDSSAT in the terminal<a class="headerlink" href="#use-pydssat-in-the-terminal" title="Permalink to this headline">¶</a></h2>
+<p>You can run DSSAT model using the following steps:</p>
+<ol class="arabic">
+<li><p class="first">Import DSSAT_LIBRARY:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">DSSAT_LIBRARY</span> <span class="kn">as</span> <span class="nn">DL</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Specify crop type, weather station information, simulation start year,
+simulation end year, plant month, plant date and the running mode:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">DL</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="n">crop</span><span class="o">=</span><span class="s">&#39;Maize&#39;</span><span class="p">,</span><span class="n">soil</span><span class="o">=</span><span class="s">&#39;Sand&#39;</span><span class="p">,</span><span class="n">weather</span><span class="o">=</span><span class="s">&#39;DTCM&#39;</span><span class="p">,</span><span class="n">st_yr</span><span class="o">=</span><span class="mi">1948</span><span class="p">,</span><span class="n">ed_yr</span><span class="o">=</span><span class="mi">2010</span><span class="p">,</span><span class="n">plant_month</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span><span class="n">plant_date</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s">&#39;S&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Define the model and conduct the simulation:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">model</span><span class="o">=</span><span class="n">DL</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="s">&#39;S&#39;</span><span class="p">,</span><span class="s">&#39;run.v45&#39;</span><span class="p">,</span><span class="s">&#39;../DSCSM045.CTR&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>In case you want to do some post-process:</p>
+<ol class="arabic">
+<li><p class="first">Load simulation output and its corresponding description file for DSSAT variables:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">out</span><span class="o">=</span><span class="n">DL</span><span class="o">.</span><span class="n">postProcess</span><span class="p">(</span><span class="s">&#39;../&#39;</span><span class="p">,</span><span class="s">&#39;POST-VAR-INFO.CDE&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Draw figures for different variables, e.g., yield, precipitation and temperature:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">out</span><span class="o">.</span><span class="n">drawTimeSeries</span><span class="p">(</span><span class="s">&#39;./Summary.OUT&#39;</span><span class="p">,</span><span class="s">&#39;HWAM&#39;</span><span class="p">)</span>
+<span class="n">out</span><span class="o">.</span><span class="n">drawTimeSeries</span><span class="p">(</span><span class="s">&#39;./Summary.OUT&#39;</span><span class="p">,</span><span class="s">&#39;PRCM&#39;</span><span class="p">)</span>
+<span class="n">out</span><span class="o">.</span><span class="n">drawTimeSeries</span><span class="p">(</span><span class="s">&#39;./Summary.OUT&#39;</span><span class="p">,</span><span class="s">&#39;TMAXA&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="use-pydssat-gui">
+<span id="pydssat-gui"></span><h2>Use pyDSSAT GUI<a class="headerlink" href="#use-pydssat-gui" title="Permalink to this headline">¶</a></h2>
+<p>You can also use our designed python GUI for pyDSSAT.
+To do this, you need to:</p>
+<div class="highlight-python"><div class="highlight"><pre>cd PyScripts
+python ./DSSAT_GUI.py
+</pre></div>
+</div>
+<p>Then you will be able to see the GUI like this:</p>
+<img alt="_images/pyDSSAT_GUI.png" src="_images/pyDSSAT_GUI.png" />
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="API"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Download and Install"
+             >previous</a> |</li>
+        <li><a href="index.html">home</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, Xiaogang HE, Liqing PENG, He SUN.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
