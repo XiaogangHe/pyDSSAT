@@ -108,7 +108,7 @@ Dependencies for install
 Must Have
 ---------
 
-* Git_
+* Git_:
 * Python_: 2.5 or later
 * NumPy_: 1.2 or later:  Numpy is an array library for Python
   numpy
